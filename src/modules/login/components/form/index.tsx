@@ -9,7 +9,7 @@ const LoginForm = () => {
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ) => {
     event.preventDefault();
-    router.push("/admin/dashboard");
+    router.push("/volunteer/dashboard");
   };
 
   return (
