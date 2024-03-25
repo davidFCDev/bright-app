@@ -8,7 +8,7 @@ import Image from "next/image";
 
 const DashboardTemplate = () => {
   return (
-    <div className={`${styles.page} flex flex-col gap-8`}>
+    <div className={`${styles.page} flex flex-col gap-8 px-10 py-3`}>
       <div className="w-full bg-terciary p-4 flex items-center">
         <h2 className="font-semibold text-neutral-700">
           ⭐ You have 2 new requests! Lorem ipsum dolor sit amet.{" "}
@@ -47,15 +47,16 @@ const DashboardTemplate = () => {
             <div className="flex items-center justify-center text-sm gap-4">
               <p className="text-neutral-500">Show</p>
               <select className="border border-neutral-300 px-2 py-1 focus:border-neutral-400">
-                <option value="1" className="font-semibold">Last 12 months</option>
+                <option value="1" className="font-semibold">
+                  Last 12 months
+                </option>
               </select>
             </div>
           </div>
-
-          <Image src="/chart.png" alt="chart" width={1300} height={500} />
-          <div className="w-full flex border-neutral-300 bg-neutral-100">
-
+          <div className="flex items-center justify-center w-full">
+            <Image src="/chart.png" alt="chart" width={1300} height={500} />
           </div>
+          <div className="w-full flex border-neutral-300 bg-neutral-100"></div>
         </div>
       </div>
     </div>
