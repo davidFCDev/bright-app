@@ -1,9 +1,13 @@
-import React from 'react'
+
+import { styles } from "@/styles";
+import React from "react";
 
 const RequestsTemplate = () => {
   return (
-    <div>RequestsTemplate</div>
-  )
-}
+    <div className={`${styles.page} flex flex-col gap-8 px-10 pt-3 pb-20`}>
 
-export default RequestsTemplate
+    </div>
+  );
+};
+
+export default RequestsTemplate;

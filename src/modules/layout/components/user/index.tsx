@@ -1,18 +1,11 @@
-import { NavContext } from "@/lib/context/nav-context";
+import { useNavContext } from "@/lib/context/nav-context";
+import Icon from "@/modules/common/icons";
 import { usePathname } from "next/navigation";
-import React, { useContext } from "react";
-import { BiSolidDoorOpen } from "react-icons/bi";
-import { IoSettingsSharp } from "react-icons/io5";
 
 const User = () => {
   const currentPath = usePathname();
-  const navContext = useContext(NavContext);
 
-  if (!navContext) {
-    throw new Error("useNavContext must be used within a NavProvider");
-  }
-
-  const { showMenu } = navContext;
+  const { showMenu } = useNavContext();
 
   let userType = "";
   if (currentPath.startsWith("/volunteer/")) {
@@ -26,33 +19,31 @@ const User = () => {
       {showMenu && (
         <div className="border border-neutral-300 p-3 flex flex-col gap-3">
           <div className="flex items-center justify-between">
-            <p className="py-1 px-2 bg-terciary border border-secondary text-secondary font-semibold text-xs">
+            <span className="py-1 px-2 bg-terciary border border-secondary text-secondary font-semibold text-xs">
               {userType}
-            </p>
+            </span>
             <button className="text-xl">
-              <IoSettingsSharp />
+              <Icon svg="/icons/Settings.svg" />
             </button>
           </div>
           <p>Robert Miller</p>
-          <p className="text-xs">robert@brightsky.com</p>
-          <div>
+          <span className="text-xs">robert@brightsky.com</span>
+          <>
             <button className="flex items-center gap-2 p-2 border border-neutral-300 hover:border-neutral-400">
-              <div className="text-xl">
-                <BiSolidDoorOpen />
-              </div>
+              <Icon svg="/icons/Logout.svg" />
               <span className="text-sm">Logout</span>
             </button>
-          </div>
+          </>
         </div>
       )}
 
       {!showMenu && (
         <div className="flex flex-col items-start gap-4">
-          <button className="text-2xl">
-            <IoSettingsSharp />
+          <button>
+            <Icon svg="/icons/Settings.svg" />
           </button>
-          <button className="text-2xl">
-              <BiSolidDoorOpen />
+          <button>
+            <Icon svg="/icons/Logout.svg" />
           </button>
         </div>
       )}

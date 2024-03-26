@@ -1,5 +1,5 @@
 "use client";
-import { createContext, ReactNode, useState } from "react";
+import { createContext, ReactNode, useContext, useState } from "react";
 
 export interface NavContextProps {
   showMenu: boolean;
@@ -31,4 +31,12 @@ export const NavProvider = ({ children }: NavProviderProps) => {
       {children}
     </NavContext.Provider>
   );
+};
+
+export const useNavContext = () => {
+  const navContext = useContext(NavContext);
+  if (!navContext) {
+    throw new Error("useNavContext must be used within a NavProvider");
+  }
+  return navContext;
 };
