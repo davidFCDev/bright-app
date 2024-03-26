@@ -6,12 +6,19 @@ export interface Route {
     number?: number;
   }
 
-export interface NewRequests {
+export interface RequestTable {
     date: string;
     status: string;
     assigned: string;
     name: string;
     children: number;
+  }
+
+export interface StatsTable {
+    location: string;
+    volunteers: number;
+    items_sent: number;
+    children_served: number;
   }
 
 export interface MyStats {
@@ -28,7 +35,7 @@ export interface AdminStats  {
     description: string;
     icon: React.ReactNode;
     percent: number;
-    color: string;
+    status: boolean;
   }
 
   export interface NameList {

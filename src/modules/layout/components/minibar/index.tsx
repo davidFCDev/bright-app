@@ -21,7 +21,7 @@ const Minibar = ({ routes }: RoutesProps) => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
           transition={{ duration: 1 }}
-          className="w-fit h-screen flex flex-col gap-20 justify-between text-neutral-800 border-r border-neutral-300"
+          className="w-fit h-screen flex flex-col justify-between text-neutral-800 border-r border-neutral-300"
         >
           <div className="flex flex-col">
             <div className="border-b border-neutral-300 flex justify-center items-center">

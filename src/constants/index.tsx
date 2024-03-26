@@ -1,19 +1,26 @@
-import { AdminStats, MyStats, NameList, NewRequests, Route } from "@/types";
+import {
+  AdminStats,
+  MyStats,
+  NameList,
+  RequestTable,
+  Route,
+  StatsTable,
+} from "@/types";
 import Icon from "@/modules/common/icons";
 
 export const VOL_ROUTES: Route[] = [
   {
-    path: "/volunteer/dashboard",
+    path: "/menu/dashboard/volunteer",
     name: "Dashboard",
     icon: <Icon svg="/icons/Dashboard.svg" />,
   },
   {
-    path: "/volunteer/requests",
+    path: "/menu/requests",
     name: "Requests",
     icon: <Icon svg="/icons/Requests.svg" />,
   },
   {
-    path: "/volunteer/notifications",
+    path: "/menu/messages",
     name: "Notifications",
     icon: <Icon svg="/icons/Chat.svg" />,
     number: 2,
@@ -22,49 +29,49 @@ export const VOL_ROUTES: Route[] = [
 
 export const ADMIN_ROUTES: Route[] = [
   {
-    path: "/admin/dashboard",
+    path: "/menu/dashboard/admin",
     name: "Dashboard",
     icon: <Icon svg="/icons/Dashboard.svg" />,
   },
   {
-    path: "/admin/requests",
+    path: "/menu/requests",
     name: "Requests",
     icon: <Icon svg="/icons/Requests.svg" />,
   },
   {
-    path: "/admin/extraforms",
+    path: "/menu/extraforms",
     name: "Extra Forms",
     icon: <Icon svg="/icons/ExtraRequests.svg" />,
   },
   {
-    path: "/admin/analytics",
+    path: "/menu/analytics",
     name: "Analytics",
     icon: <Icon svg="/icons/Stats.svg" />,
   },
   {
-    path: "/admin/users",
+    path: "/menu/users",
     name: "Users",
     icon: <Icon svg="/icons/Users.svg" />,
   },
   {
-    path: "/admin/delivery",
+    path: "/menu/delivery",
     name: "Delivery Volunteers",
     icon: <Icon svg="/icons/Delivery.svg" />,
   },
   {
-    path: "/admin/agencies",
+    path: "/menu/agencies",
     name: "Agencies",
     icon: <Icon svg="/icons/Agencies.svg" />,
   },
   {
-    path: "/admin/messages",
+    path: "/menu/messages",
     name: "Messages",
     icon: <Icon svg="/icons/Chat.svg" />,
     number: 2,
   },
 ];
 
-export const NEW_REQUESTS: NewRequests[] = [
+export const REQUEST_TABLE: RequestTable[] = [
   {
     date: "02/12/2024, 11:21 am",
     status: "New",
@@ -78,6 +85,21 @@ export const NEW_REQUESTS: NewRequests[] = [
     assigned: "You",
     name: "Anna Thompson",
     children: 1,
+  },
+];
+
+export const STATS_TABLE: StatsTable[] = [
+  {
+    location: "Life Church - South OKC",
+    volunteers: 2,
+    items_sent: 9,
+    children_served: 2,
+  },
+  {
+    location: "Life Church - Mustang",
+    volunteers: 2,
+    items_sent: 11,
+    children_served: 5,
   },
 ];
 
@@ -119,7 +141,7 @@ export const ADMIN_STATS: AdminStats[] = [
     description: "Children Served",
     icon: <Icon svg="/icons/Children.svg" />,
     percent: 7,
-    color: "bg-red-500",
+    status: false,
   },
   {
     title: "$169.00",
@@ -127,7 +149,7 @@ export const ADMIN_STATS: AdminStats[] = [
     description: "Average Cost per Request",
     icon: <Icon svg="/icons/Cost.svg" />,
     percent: 112,
-    color: "bg-red-500",
+    status: false,
   },
   {
     title: "31 hrs",
@@ -135,7 +157,7 @@ export const ADMIN_STATS: AdminStats[] = [
     description: "Request Completion time",
     icon: <Icon svg="/icons/Stopwatch.svg" />,
     percent: 68,
-    color: "bg-green-500",
+    status: true,
   },
   {
     title: "6",
@@ -143,7 +165,7 @@ export const ADMIN_STATS: AdminStats[] = [
     description: "Working Volunteers",
     icon: <Icon svg="/icons/Volunteers.svg" />,
     percent: 86,
-    color: "bg-green-500",
+    status: true,
   },
 ];
 

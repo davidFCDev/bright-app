@@ -12,6 +12,7 @@ const config: Config = {
         primary: "#1CACE4",
         secondary: "#0E5976",
         terciary: "#E0F2F9",
+        light: "#F8FCFF",
       },
     },
   },
