@@ -1,5 +1,7 @@
 import {
   AdminStats,
+  AgeTable,
+  CountryTable,
   ExtraFormsTable,
   MyStats,
   NameList,
@@ -93,7 +95,11 @@ export const NEW_REQUEST_TABLE: NewRequestTable[] = [
 export const REQUESTS_TABLE: RequestsTable[] = [
   {
     status: "New",
-    assigned: <select><option value="">Assign</option></select>,
+    assigned: (
+      <select>
+        <option value="">Assign</option>
+      </select>
+    ),
     name: "Marilyn Lipshutz",
     children: 2,
     date: "02/12/2024, 11:21 am",
@@ -132,8 +138,8 @@ export const REQUESTS_TABLE: RequestsTable[] = [
     name: "Hanna Kenter",
     children: 1,
     date: "02/12/2024, 11:21 am",
-  }
-]
+  },
+];
 
 export const EXTRA_FORMS_TABLE: ExtraFormsTable[] = [
   {
@@ -141,44 +147,44 @@ export const EXTRA_FORMS_TABLE: ExtraFormsTable[] = [
     name: "Talan Kenter",
     mail: "talan29@hotmail.com",
     date_sent: "02/12/2024, 11:21 am",
-    request: "-"
+    request: "-",
   },
   {
     status: "Used",
     name: "Kaylynn Bator",
     mail: "septimus.c@gmail.com",
     date_sent: "02/12/2024, 11:21 am",
-    request: "Ready (02/12/2024, 11:21 am)"
+    request: "Ready (02/12/2024, 11:21 am)",
   },
   {
     status: "Sent",
     name: "Erin Herwitz",
     mail: "erinher@gmail.com",
     date_sent: "02/12/2024, 11:21 am",
-    request: "-"
+    request: "-",
   },
   {
     status: "Sent",
     name: "Gretchen Workman",
     mail: "get1990@webmail.com",
     date_sent: "02/12/2024, 11:21 am",
-    request: "-"
+    request: "-",
   },
   {
     status: "Resent",
     name: "Jaxson Franci",
     mail: "jaxsonfraa@hotmail.com",
     date_sent: "02/12/2024, 11:21 am",
-    request: "-"
+    request: "-",
   },
   {
     status: "Resent",
     name: "Jaxson Workman",
     mail: "workmanjax00@gmail.com",
     date_sent: "02/12/2024, 11:21 am",
-    request: "-"
-  }
-]
+    request: "-",
+  },
+];
 
 export const STATS_TABLE: StatsTable[] = [
   {
@@ -192,6 +198,62 @@ export const STATS_TABLE: StatsTable[] = [
     volunteers: 2,
     items_sent: 11,
     children_served: 5,
+  },
+];
+
+export const AGE_TABLE: AgeTable[] = [
+  {
+    age: "Age 3 and Under",
+    children_served: 48,
+    percent: 57.8,
+  },
+  {
+    age: "Age 4-7",
+    children_served: 15,
+    percent: 7,
+  },
+  {
+    age: "Age 7-12",
+    children_served: 11,
+    percent: 6,
+  },
+  {
+    age: "Age 13 and Up",
+    children_served: 9,
+    percent: 5,
+  },
+];
+
+export const COUNTRY_TABLE: CountryTable[] = [
+  {
+    country: "Oklahoma",
+    children_served: 48,
+    percent: 24,
+  },
+  {
+    country: "Tulsa",
+    children_served: 7,
+    percent: 7,
+  },
+  {
+    country: "Grady",
+    children_served: 11,
+    percent: 6,
+  },
+  {
+    country: "Washington",
+    children_served: 9,
+    percent: 5,
+  },
+  {
+    country: "Payne",
+    children_served: 8,
+    percent: 4,
+  },
+  {
+    country: "Comanche",
+    children_served: 5,
+    percent: 3,
   },
 ];
 

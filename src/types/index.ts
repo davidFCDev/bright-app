@@ -31,6 +31,18 @@ export interface ExtraFormsTable {
     request: string;
   }
 
+export interface AgeTable {
+    age: string;
+    children_served: number;
+    percent: number;
+  }
+
+export interface CountryTable {
+    country: string;
+    children_served: number;
+    percent: number;
+ }
+
 export interface StatsTable {
     location: string;
     volunteers: number;
@@ -44,7 +56,7 @@ export interface MyStats {
   description: string;
   icon: React.ReactNode;
   status: boolean;
-}
+ }
 
 export interface AdminStats  {
     title: string;

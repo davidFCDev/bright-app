@@ -14,7 +14,7 @@ const NameImput = () => {
           className="w-[400px] px-4 py-2 outline-none border border-neutral-300 bg-light"
           placeholder="Jaxson Geidt"
         />
-        <Icon svg="/icons/Minus.svg" color="red" />
+        <Icon svg="/icons/Minus.svg" />
       </div>
     </div>
   );

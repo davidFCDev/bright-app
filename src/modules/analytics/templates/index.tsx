@@ -3,6 +3,7 @@ import OutButton from "@/modules/common/outline-button";
 import React from "react";
 import Resume from "../components/resume";
 import Image from "next/image";
+import AgeTable from "../components/age-table";
 
 const AnalyticsTemplate = () => {
   return (
@@ -43,6 +44,7 @@ const AnalyticsTemplate = () => {
         </div>
         <div>
           <Image src="/rounded-chart.png" alt="chart" width={250} height={250} />
+          <AgeTable />
         </div>
       </div>
     </div>
