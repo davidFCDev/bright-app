@@ -1,8 +1,10 @@
 import {
   AdminStats,
+  ExtraFormsTable,
   MyStats,
   NameList,
-  RequestTable,
+  NewRequestTable,
+  RequestsTable,
   Route,
   StatsTable,
 } from "@/types";
@@ -71,7 +73,7 @@ export const ADMIN_ROUTES: Route[] = [
   },
 ];
 
-export const REQUEST_TABLE: RequestTable[] = [
+export const NEW_REQUEST_TABLE: NewRequestTable[] = [
   {
     date: "02/12/2024, 11:21 am",
     status: "New",
@@ -87,6 +89,96 @@ export const REQUEST_TABLE: RequestTable[] = [
     children: 1,
   },
 ];
+
+export const REQUESTS_TABLE: RequestsTable[] = [
+  {
+    status: "New",
+    assigned: <select><option value="">Assign</option></select>,
+    name: "Marilyn Lipshutz",
+    children: 2,
+    date: "02/12/2024, 11:21 am",
+  },
+  {
+    status: "Assigned",
+    assigned: "Cheyenne Septimus",
+    name: "Anna Thompson",
+    children: 1,
+    date: "02/12/2024, 11:21 am",
+  },
+  {
+    status: "Assigned",
+    assigned: "Talan Kenter",
+    name: "Adison Philips",
+    children: 1,
+    date: "02/12/2024, 11:21 am",
+  },
+  {
+    status: "Assigned",
+    assigned: "Gretchen Workman",
+    name: "Nolan Gouse",
+    children: 1,
+    date: "02/12/2024, 11:21 am",
+  },
+  {
+    status: "Assigned",
+    assigned: "Jaxson Franci",
+    name: "Madelyn Torff",
+    children: 1,
+    date: "02/12/2024, 11:21 am",
+  },
+  {
+    status: "Assigned",
+    assigned: "Jaxson Workman",
+    name: "Hanna Kenter",
+    children: 1,
+    date: "02/12/2024, 11:21 am",
+  }
+]
+
+export const EXTRA_FORMS_TABLE: ExtraFormsTable[] = [
+  {
+    status: "Sent",
+    name: "Talan Kenter",
+    mail: "talan29@hotmail.com",
+    date_sent: "02/12/2024, 11:21 am",
+    request: "-"
+  },
+  {
+    status: "Used",
+    name: "Kaylynn Bator",
+    mail: "septimus.c@gmail.com",
+    date_sent: "02/12/2024, 11:21 am",
+    request: "Ready (02/12/2024, 11:21 am)"
+  },
+  {
+    status: "Sent",
+    name: "Erin Herwitz",
+    mail: "erinher@gmail.com",
+    date_sent: "02/12/2024, 11:21 am",
+    request: "-"
+  },
+  {
+    status: "Sent",
+    name: "Gretchen Workman",
+    mail: "get1990@webmail.com",
+    date_sent: "02/12/2024, 11:21 am",
+    request: "-"
+  },
+  {
+    status: "Resent",
+    name: "Jaxson Franci",
+    mail: "jaxsonfraa@hotmail.com",
+    date_sent: "02/12/2024, 11:21 am",
+    request: "-"
+  },
+  {
+    status: "Resent",
+    name: "Jaxson Workman",
+    mail: "workmanjax00@gmail.com",
+    date_sent: "02/12/2024, 11:21 am",
+    request: "-"
+  }
+]
 
 export const STATS_TABLE: StatsTable[] = [
   {

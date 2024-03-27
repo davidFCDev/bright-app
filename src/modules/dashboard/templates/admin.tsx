@@ -1,12 +1,13 @@
 import Message from "../components/message";
 import Icon from "@/modules/common/icons";
-import RequestTable from "../components/request-table";
 import Selector from "../components/selector";
 import Image from "next/image";
 import AdminData from "../components/admin-data";
 import StatsTable from "../components/stats-table";
+import NewRequestTable from "../components/new-request-table";
 
 const AdminDashboardTemplate = () => {
+
   return (
     <div className="page">
       <Message number={2} />
@@ -20,7 +21,7 @@ const AdminDashboardTemplate = () => {
           </span>
         </div>
 
-        <RequestTable />
+        <NewRequestTable />
 
         <div className="flex w-full justify-end">
           <div className="flex items-center gap-4">

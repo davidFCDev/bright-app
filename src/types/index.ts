@@ -1,3 +1,4 @@
+import { ReactNode } from "react";
 
 export interface Route {
     path: string;
@@ -6,12 +7,28 @@ export interface Route {
     number?: number;
   }
 
-export interface RequestTable {
-    date: string;
+export interface NewRequestTable {
+  date: string,
+  status: string,
+  assigned: string,
+  name: string,
+  children: number,
+  }
+
+export interface RequestsTable {
     status: string;
-    assigned: string;
+    assigned: string | ReactNode;
     name: string;
     children: number;
+    date: string;
+  }
+
+export interface ExtraFormsTable {
+    status: string;
+    name: string;
+    mail: string;
+    date_sent: string;
+    request: string;
   }
 
 export interface StatsTable {

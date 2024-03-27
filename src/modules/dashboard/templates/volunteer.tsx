@@ -1,6 +1,6 @@
 import Message from "../components/message";
 import Icon from "@/modules/common/icons";
-import RequestTable from "../components/request-table";
+import NewRequestTable from "../components/new-request-table";
 import Selector from "../components/selector";
 import Image from "next/image";
 import VolunteerData from "../components/volunteer-data";
@@ -19,7 +19,7 @@ const DashboardTemplate = () => {
           </span>
         </div>
 
-        <RequestTable />
+        <NewRequestTable />
 
         <div className="flex w-full justify-end">
           <button className="flex items-center gap-2 border border-neutral-300 px-4 py-2 hover:border-neutral-400">

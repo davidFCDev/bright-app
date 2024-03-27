@@ -13,6 +13,8 @@ const config: Config = {
         secondary: "#0E5976",
         terciary: "#E0F2F9",
         light: "#F8FCFF",
+        brown: "#9E9031",
+        lightBrown: "#DCCB54"
       },
     },
   },

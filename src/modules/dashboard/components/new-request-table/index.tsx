@@ -1,7 +1,7 @@
+import { NEW_REQUEST_TABLE } from "@/constants";
 import React from "react";
-import { REQUEST_TABLE } from "@/constants";
 
-const RequestTable = () => {
+const NewRequestTable = () => {
   return (
     <table className="w-full items-start text-xs">
       <thead className="text-left bg-secondary text-terciary">
@@ -14,10 +14,10 @@ const RequestTable = () => {
         </tr>
       </thead>
       <tbody className="font-semibold text-neutral-600">
-        {REQUEST_TABLE.map((request) => (
-          <tr key={request.name} className="bg-neutral-50 border border-neutral-300">
+        {NEW_REQUEST_TABLE.map((request, index) => (
+          <tr key={index} className="bg-neutral-50 border border-neutral-300">
             <td className="px-5 py-4">{request.date}</td>
-            <td className="px-5 py-4 flex"><div className="px-2 py-1 bg-terciary border border-primary text-primary">{request.status}</div></td>
+            <td className="px-5 py-4">{request.status}</td>
             <td className="px-5 py-4">{request.assigned}</td>
             <td className="px-5 py-4">{request.name}</td>
             <td className="px-5 py-4">{request.children}</td>
@@ -28,4 +28,4 @@ const RequestTable = () => {
   );
 };
 
-export default RequestTable;
+export default NewRequestTable;

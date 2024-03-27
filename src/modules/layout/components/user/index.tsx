@@ -1,18 +1,8 @@
 import { useNavContext } from "@/lib/context/nav-context";
 import Icon from "@/modules/common/icons";
-import { usePathname } from "next/navigation";
 
 const User = () => {
-  const currentPath = usePathname();
-
   const { showMenu } = useNavContext();
-
-  let userType = "";
-  if (currentPath.startsWith("/volunteer/")) {
-    userType = "Volunteer";
-  } else if (currentPath.startsWith("/admin/")) {
-    userType = "Admin";
-  }
 
   return (
     <>
@@ -20,7 +10,7 @@ const User = () => {
         <div className="border border-neutral-300 p-3 flex flex-col gap-3">
           <div className="flex items-center justify-between">
             <span className="py-1 px-2 bg-terciary border border-secondary text-secondary font-semibold text-xs">
-              {userType}
+              Admin
             </span>
             <button className="text-xl">
               <Icon svg="/icons/Settings.svg" />

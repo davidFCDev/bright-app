@@ -21,7 +21,7 @@ const Navbar = ({ routes }: RoutesProps) => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -50 }}
           transition={{ duration: 1 }}
-          className="w-fit h-screen flex flex-col justify-between text-neutral-800 border-r border-neutral-300"
+          className="w-fit gap-20 h-screen flex flex-col justify-between text-neutral-800 border-r border-neutral-300"
         >
           <div className="flex flex-col">
             <div className="border-b border-neutral-300">
@@ -34,9 +34,9 @@ const Navbar = ({ routes }: RoutesProps) => {
             </div>
           </div>
 
-          <div className="flex flex-col p-3 gap-3 font-semibold">
+          <div className="flex flex-col p-3 gap-3 font-semibold w-full">
             <button
-              className="flex items-center justify-start gap-2 "
+              className="flex items-center gap-2 w-full"
               onClick={handleShow}
             >
               <Icon svg="/icons/DoubleArrow.svg" />
