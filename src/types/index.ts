@@ -99,7 +99,17 @@ export interface AdminStats  {
     status: boolean;
   }
 
-  export interface NameList {
+export interface NameList {
     name: string;
+  }
+
+export interface AgenciesList {
+    [key: string]: string[];
+  }
+
+export interface MessageList {
+    name: string;
+    message: string;
+    time: string;
   }
   

@@ -1,4 +1,6 @@
 "use client";
+import { DELIVERY_TABLE } from "@/constants";
+import { useParams } from "next/navigation";
 import { createContext, ReactNode, useContext, useState } from "react";
 
 export interface InterfaceContextProps {
@@ -8,6 +10,10 @@ export interface InterfaceContextProps {
   toggleOptions: (index: number) => void;
   handleShowAdd: () => void;
   handleShowEdit: () => void;
+  goBack: () => void;
+  delivery: any;
+  selectedOption: [string, number] | null;
+  toggleAgencyOptions: (letter: string, index: number) => void;
 }
 
 export const InterfaceContext = createContext<
@@ -22,6 +28,23 @@ export const InterfaceProvider = ({ children }: InterfaceProviderProps) => {
   const [showAdd, setShowAdd] = useState(false);
   const [showEdit, setShowEdit] = useState(false);
   const [selectedRow, setSelectedRow] = useState<number | null>(null);
+  const [selectedOption, setSelectedOption] = useState<[string, number] | null>(
+    null
+  );
+
+  const toggleAgencyOptions = (letter: string, index: number) => {
+    const optionKey: [string, number] = [letter, index];
+    setSelectedOption((prev) =>
+      prev && prev[0] === letter && prev[1] === index ? null : optionKey
+    );
+  };
+
+  const { id } = useParams() || { id: undefined };
+  const delivery = DELIVERY_TABLE.find((item) => item.id === Number(id));
+
+  const goBack = () => {
+    window.history.back();
+  };
 
   const toggleOptions = (index: number) => {
     setSelectedRow(selectedRow === index ? null : index);
@@ -44,6 +67,10 @@ export const InterfaceProvider = ({ children }: InterfaceProviderProps) => {
         toggleOptions,
         handleShowAdd,
         handleShowEdit,
+        goBack,
+        delivery,
+        selectedOption,
+        toggleAgencyOptions,
       }}
     >
       {children}

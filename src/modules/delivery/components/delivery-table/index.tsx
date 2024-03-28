@@ -3,13 +3,11 @@ import { DELIVERY_TABLE } from "@/constants";
 import Icon from "@/modules/common/icons";
 import DeliveryOptions from "../delivery-options";
 import { useInterfaceContext } from "@/lib/context/interface-context";
-import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const DeliveryTable = () => {
   const router = useRouter();
   const { selectedRow, toggleOptions } = useInterfaceContext();
-  const [showSelectedDetails, setShowSelectedDetails] = useState(false);
 
   const handleShowDetails = (id: number) => {
     router.push(`/menu/delivery/${id}`);

@@ -1,9 +1,11 @@
 import {
   AdminStats,
   AgeTable,
+  AgenciesList,
   CountryTable,
   DeliveryTable,
   ExtraFormsTable,
+  MessageList,
   MyStats,
   NameList,
   NewRequestTable,
@@ -240,10 +242,7 @@ export const DELIVERY_TABLE: DeliveryTable[] = [
     status: "Active",
     organization: "Life Church",
     location: "Mustang",
-    address: [
-      "1052 E State Highway 152",
-      "Mustang, OK 73064"
-    ],
+    address: ["1052 E State Highway 152", "Mustang, OK 73064"],
     volunteers: 2,
     lat: 35.3844,
     long: 35.3844,
@@ -255,10 +254,7 @@ export const DELIVERY_TABLE: DeliveryTable[] = [
     status: "Active",
     organization: "Life Church",
     location: "South OKC",
-    address: [
-      "1052 E State Highway 152",
-      "Mustang, OK 73064"
-    ],
+    address: ["1052 E State Highway 152", "Mustang, OK 73064"],
     volunteers: 1,
     lat: 35.3844,
     long: 35.3844,
@@ -270,10 +266,7 @@ export const DELIVERY_TABLE: DeliveryTable[] = [
     status: "Active",
     organization: "Act of Love",
     location: "Mustang",
-    address: [
-      "1052 E State Highway 152",
-      "Mustang, OK 73064"
-    ],
+    address: ["1052 E State Highway 152", "Mustang, OK 73064"],
     volunteers: 5,
     lat: 35.3844,
     long: 35.3844,
@@ -285,10 +278,7 @@ export const DELIVERY_TABLE: DeliveryTable[] = [
     status: "Active",
     organization: "Anna's Home",
     location: "Mustang",
-    address: [
-      "1052 E State Highway 152",
-      "Mustang, OK 73064"
-    ],
+    address: ["1052 E State Highway 152", "Mustang, OK 73064"],
     volunteers: 1,
     lat: 35.3844,
     long: 35.3844,
@@ -300,10 +290,7 @@ export const DELIVERY_TABLE: DeliveryTable[] = [
     status: "Active",
     organization: "Nine",
     location: "Mustang",
-    address: [
-      "1052 E State Highway 152",
-      "Mustang, OK 73064"
-    ],
+    address: ["1052 E State Highway 152", "Mustang, OK 73064"],
     volunteers: 3,
     lat: 35.3844,
     long: 35.3844,
@@ -315,17 +302,14 @@ export const DELIVERY_TABLE: DeliveryTable[] = [
     status: "Inactive",
     organization: "Foster Care",
     location: "Mustang",
-    address: [
-      "1052 E State Highway 152",
-      "Mustang, OK 73064"
-    ],
+    address: ["1052 E State Highway 152", "Mustang, OK 73064"],
     volunteers: 2,
     lat: 35.3844,
     long: 35.3844,
     max_distance: 20,
     zips: [73064, 73099],
   },
-]
+];
 
 export const VOLUNTEERS_TABLE: VolunteerTable[] = [
   {
@@ -333,42 +317,30 @@ export const VOLUNTEERS_TABLE: VolunteerTable[] = [
     name: "Kianna Bator",
     email: "kiannab@gmail.com",
     phone: "(206) 342-8631",
-    address: [
-      "1052 E State Highway 152",
-      "Mustang, OK 73064"
-    ]
+    address: ["1052 E State Highway 152", "Mustang, OK 73064"],
   },
   {
     status: "Active",
     name: "Zaire Franci",
     email: "zairefranc@gmail.com",
     phone: "(206) 342-8631",
-    address: [
-      "1052 E State Highway 152",
-      "Mustang, OK 73064"
-    ]
+    address: ["1052 E State Highway 152", "Mustang, OK 73064"],
   },
   {
     status: "Active",
     name: "Marley Geidt Bator",
     email: "marleygeidt@gmail.com",
     phone: "(206) 342-8631",
-    address: [
-      "1052 E State Highway 152",
-      "Mustang, OK 73064"
-    ]
+    address: ["1052 E State Highway 152", "Mustang, OK 73064"],
   },
   {
     status: "Inactive",
     name: "Kianna Septimus",
     email: "septimusk@gmail.com",
     phone: "(206) 342-8631",
-    address: [
-      "1052 E State Highway 152",
-      "Mustang, OK 73064"
-    ]
+    address: ["1052 E State Highway 152", "Mustang, OK 73064"],
   },
-]
+];
 
 export const STATS_TABLE: StatsTable[] = [
   {
@@ -523,5 +495,53 @@ export const NAME_LIST: NameList[] = [
   },
   {
     name: "Wilson Levin",
+  },
+];
+
+export const AGENCIES_LIST: AgenciesList = {
+  A: ["Act of Love", "Angels", "Anna's Home"],
+  C: [
+    "CASA",
+    "Cherokee Nation",
+    "Cheyenne and Arapho",
+    "Chickasaw Nation",
+    "Circle of Care",
+  ],
+  F: ["Family for Life", "Foster Care"],
+  H: ["Homebase Services"],
+  L: ["Legal Aide/Kids Space", "Lilyfield", "Lions Meadows of Hope"],
+  N: ["Nightlight Christian Adoptions and Foster Care", "Nine"],
+};
+
+export const MESSAGES_LIST: MessageList[] = [
+  {
+    name: "Aspen Dorwart",
+    message:
+      "Nunc suscipit risus ligula, malesuada mattis ante lacinia at. Maecenas maximu...",
+    time: "2m ago",
+  },
+  {
+    name: "Marilyn Vetrovs",
+    message:
+      "Nunc suscipit risus ligula, malesuada mattis ante lacinia at. Maecenas maximu...",
+    time: "52m ago",
+  },
+  {
+    name: "Philip Stanton",
+    message:
+      "Nunc suscipit risus ligula, malesuada mattis ante lacinia at. Maecenas maximu...",
+    time: "Mon",
+  },
+  {
+    name: "Leo Passaquindice Arcand",
+    message:
+      "Nunc suscipit risus ligula, malesuada mattis ante lacinia at. Maecenas maximu...",
+    time: "Sun",
+  },
+  {
+    name: "Leo Saris",
+    message:
+      "Nunc suscipit risus ligula, malesuada mattis ante lacinia at. Maecenas maximu...",
+    time: "02:20",
   },
 ];

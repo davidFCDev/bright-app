@@ -3,14 +3,6 @@ import { VOLUNTEERS_TABLE } from "@/constants";
 import Icon from "@/modules/common/icons";
 
 const VolunteersTable = () => {
-  //   const router = useRouter();
-  //   const { selectedRow, toggleOptions } = useInterfaceContext();
-  //   const [showSelectedDetails, setShowSelectedDetails] = useState(false);
-
-  //   const handleShowDetails = (id: number) => {
-  //     router.push(`/menu/delivery/${id}`);
-  //   };
-
   return (
     <table className="w-full items-start text-xs">
       <thead className="text-left bg-secondary text-terciary">
@@ -28,7 +20,6 @@ const VolunteersTable = () => {
       <tbody className="font-semibold text-neutral-600">
         {VOLUNTEERS_TABLE.map((item, index) => (
           <tr
-            // onClick={() => handleShowDetails(item.id)}
             key={index}
             className="bg-neutral-50 border border-neutral-300 hover:cursor-pointer hover:bg-neutral-200 items-center"
           >
@@ -55,9 +46,6 @@ const VolunteersTable = () => {
               <button>
                 <Icon svg="/icons/MoreOptions.svg" props="rotate-90" />
               </button>
-              {/* {selectedRow === item.id && (
-                <DeliveryOptions status={item.status} />
-              )} */}
             </td>
           </tr>
         ))}

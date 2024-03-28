@@ -20,7 +20,7 @@ const ExtraFormAdd = ({ showForm, handleShowForm }: ExtraFormAddProps) => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.5 }}
-            className="z-20 w-2/5 absolute min-h-screen bg-white right-0 border-l border-neutral-300"
+            className="z-20 w-2/5 absolute h-full bg-white right-0 border-l border-neutral-300"
           >
             <div className="flex items-end justify-between border-b border-neutral-300 w-full">
               <div className="flex items-end justify-between w-full py-5 px-8">
