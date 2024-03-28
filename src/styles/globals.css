@@ -37,3 +37,42 @@ h3 {
   font-weight: 600;
 }
 
+/** Input Switch */
+.toggle-switch {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggle-label {
+  display: inline-block;
+  width: 40px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 12px; 
+}
+
+.toggle-label:after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 20px;
+  height: 20px; 
+  border-radius: 50%;
+  background-color: #fff;
+  transition: 0.3s;
+}
+
+.toggle-switch:checked + .toggle-label {
+  background-color: #1CACE4;
+}
+
+.toggle-switch:checked + .toggle-label:after {
+  transform: translateX(16px);
+}
+
+
+

@@ -2,6 +2,7 @@ import {
   AdminStats,
   AgeTable,
   CountryTable,
+  DeliveryTable,
   ExtraFormsTable,
   MyStats,
   NameList,
@@ -9,6 +10,7 @@ import {
   RequestsTable,
   Route,
   StatsTable,
+  UsersTable,
 } from "@/types";
 import Icon from "@/modules/common/icons";
 
@@ -185,6 +187,114 @@ export const EXTRA_FORMS_TABLE: ExtraFormsTable[] = [
     request: "-",
   },
 ];
+
+export const USERS_TABLE: UsersTable[] = [
+  {
+    status: "Active",
+    name: "Talan Kenter",
+    mail: "talan29@hotmail.com",
+    phone: "(206) 342-8631",
+    user_type: "Admin",
+  },
+  {
+    status: "Active",
+    name: "Kaylynn Bator",
+    mail: "septimus.c@gmail.com",
+    phone: "(206) 342-8631",
+    user_type: "Admin",
+  },
+  {
+    status: "Active",
+    name: "Erin Herwitz",
+    mail: "erinher@gmail.com",
+    phone: "(206) 342-8631",
+    user_type: "Volunteer",
+  },
+  {
+    status: "Active",
+    name: "Gretchen Workman",
+    mail: "get1990@webmail.com",
+    phone: "(206) 342-8631",
+    user_type: "Volunteer",
+  },
+  {
+    status: "Active",
+    name: "Jaxson Franci",
+    mail: "jaxsonfraa@hotmail.com",
+    phone: "(206) 342-8631",
+    user_type: "Admin",
+  },
+  {
+    status: "Inactive",
+    name: "Jaxson Workman",
+    mail: "workmanjax00@gmail.com",
+    phone: "(206) 342-8631",
+    user_type: "Volunteer",
+  },
+];
+
+export const DELIVERY_TABLE: DeliveryTable[] = [
+  {
+    status: "Active",
+    organization: "Life Church",
+    location: "Mustang",
+    address: [
+      "1052 E State Highway 152",
+      "Mustang, OK 73064"
+    ],
+    volunteers: 2
+  },
+  {
+    status: "Active",
+    organization: "Life Church",
+    location: "South OKC",
+    address: [
+      "1052 E State Highway 152",
+      "Mustang, OK 73064"
+    ],
+    volunteers: 1
+  },
+  {
+    status: "Active",
+    organization: "Act of Love",
+    location: "Mustang",
+    address: [
+      "1052 E State Highway 152",
+      "Mustang, OK 73064"
+    ],
+    volunteers: 5
+  },
+  {
+    status: "Active",
+    organization: "Anna's Home",
+    location: "Mustang",
+    address: [
+      "1052 E State Highway 152",
+      "Mustang, OK 73064"
+    ],
+    volunteers: 1
+  },
+  {
+    status: "Active",
+    organization: "Nine",
+    location: "Mustang",
+    address: [
+      "1052 E State Highway 152",
+      "Mustang, OK 73064"
+    ],
+    volunteers: 3
+  },
+  {
+    status: "Inactive",
+    organization: "Foster Care",
+    location: "Mustang",
+    address: [
+      "1052 E State Highway 152",
+      "Mustang, OK 73064"
+    ],
+    volunteers: 2
+  },
+]
 
 export const STATS_TABLE: StatsTable[] = [
   {

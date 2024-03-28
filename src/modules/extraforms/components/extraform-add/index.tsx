@@ -1,7 +1,7 @@
 import Icon from "@/modules/common/icons";
 import { AnimatePresence, motion } from "framer-motion";
-import NameImput from "../name-input";
-import EmailInput from "../email-input";
+import NameImput from "../../../common/name-input";
+import EmailInput from "../../../common/email-input";
 import OutButton from "@/modules/common/outline-button";
 import Button from "@/modules/common/button";
 
@@ -33,10 +33,10 @@ const ExtraFormAdd = ({ showForm, handleShowForm }: ExtraFormAddProps) => {
               </div>
             </div>
             <form className="flex flex-col gap-5 py-5 px-8 text-sm">
-              <NameImput />
+              <NameImput showIcon={true}/>
               <EmailInput />
               <hr className="border border-neutral-200 w-full" />
-              <NameImput />
+              <NameImput showIcon={true} />
               <EmailInput />
               <hr className="border border-neutral-200 w-full" />
               <div>

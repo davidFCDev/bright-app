@@ -10,7 +10,7 @@ const EmailInput = () => {
         <input
           type="text"
           id="email"
-          className="w-[400px] px-4 py-2 outline-none border border-neutral-300 bg-light"
+          className="w-[400px] px-4 py-3 outline-none border border-neutral-300 bg-light"
           placeholder="jaxson.geidt@webmail.com"
         />
       </div>

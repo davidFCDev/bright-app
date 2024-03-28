@@ -1,7 +1,7 @@
 import Icon from "@/modules/common/icons";
 import React from "react";
 
-const FormFilters = () => {
+const DeliveryFilters = () => {
   return (
     <div className="flex items-center gap-3">
       <Icon svg="/icons/Filter.svg" />
@@ -9,10 +9,13 @@ const FormFilters = () => {
         <option value="All">Status: All</option>
       </select>
       <select className="border border-gray-300 rounded-[2px] px-3 py-1 text-xs font-semibold">
-        <option value="All">Date: All</option>
+        <option value="All">Organization: All</option>
+      </select>
+      <select className="border border-gray-300 rounded-[2px] px-3 py-1 text-xs font-semibold">
+        <option value="All">Location: All</option>
       </select>
     </div>
   );
 };
 
-export default FormFilters;
+export default DeliveryFilters;

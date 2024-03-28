@@ -31,6 +31,25 @@ export interface ExtraFormsTable {
     request: string;
   }
 
+export interface UsersTable {
+    status: string;
+    name: string;
+    mail: string;
+    phone: string;
+    user_type: string;
+  }
+
+export interface DeliveryTable {
+  status: string,
+  organization: string,
+    location: string,
+    address: [
+      string,
+      string
+    ]
+    volunteers: number
+}
+
 export interface AgeTable {
     age: string;
     children_served: number;

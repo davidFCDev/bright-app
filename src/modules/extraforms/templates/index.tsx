@@ -4,7 +4,7 @@ import Search from "@/modules/common/search";
 import React, { useState } from "react";
 import ExtraFormsTable from "../components/extraforms-table";
 import Button from "@/modules/common/button";
-import FormFilters from "../components/filters";
+import Filters from "../../common/filters";
 import ExtraFormAdd from "../components/extraform-add";
 
 const ExtraformsTemplate = () => {
@@ -24,7 +24,7 @@ const ExtraformsTemplate = () => {
         <Button text="+ Send Form" onClick={handleShowForm} />
       </div>
       <div className="flex flex-col gap-4 w-full">
-        <FormFilters />
+        <Filters />
         <Search />
       </div>
       <ExtraFormsTable />
