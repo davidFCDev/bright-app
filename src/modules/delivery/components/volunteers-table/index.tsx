@@ -1,10 +1,15 @@
-import { USERS_TABLE } from "@/constants";
+"use client";
+import { VOLUNTEERS_TABLE } from "@/constants";
 import Icon from "@/modules/common/icons";
-import UserOptions from "../user-options";
-import { useInterfaceContext } from "@/lib/context/interface-context";
 
-const UsersTable = () => {
-  const { selectedRow, toggleOptions } = useInterfaceContext();
+const VolunteersTable = () => {
+  //   const router = useRouter();
+  //   const { selectedRow, toggleOptions } = useInterfaceContext();
+  //   const [showSelectedDetails, setShowSelectedDetails] = useState(false);
+
+  //   const handleShowDetails = (id: number) => {
+  //     router.push(`/menu/delivery/${id}`);
+  //   };
 
   return (
     <table className="w-full items-start text-xs">
@@ -14,16 +19,20 @@ const UsersTable = () => {
             <input type="checkbox" className="scale-125" />
             <span>Status</span>
           </th>
-          <th className="px-5 py-3">Assigned</th>
           <th className="px-5 py-3">Name</th>
+          <th className="px-5 py-3">Email</th>
           <th className="px-5 py-3">Phone</th>
-          <th className="px-5 py-3">User Type</th>
+          <th className="px-5 py-3">Address</th>
         </tr>
       </thead>
       <tbody className="font-semibold text-neutral-600">
-        {USERS_TABLE.map((item, index) => (
-          <tr key={index} className="bg-neutral-50 border border-neutral-300">
-            <td className="px-5 py-4 flex gap-5">
+        {VOLUNTEERS_TABLE.map((item, index) => (
+          <tr
+            // onClick={() => handleShowDetails(item.id)}
+            key={index}
+            className="bg-neutral-50 border border-neutral-300 hover:cursor-pointer hover:bg-neutral-200 items-center"
+          >
+            <td className="px-5 py-4 flex gap-5 items-center">
               <input type="checkbox" className="scale-125" />
               <div
                 className={`border px-2 py-1 ${
@@ -36,14 +45,19 @@ const UsersTable = () => {
               </div>
             </td>
             <td className="px-5 py-4">{item.name}</td>
-            <td className="px-5 py-4">{item.mail}</td>
+            <td className="px-5 py-4">{item.email}</td>
             <td className="px-5 py-4">{item.phone}</td>
             <td className="px-5 py-4 flex items-center justify-between relative">
-              {item.user_type}
-              <button onClick={() => toggleOptions(index)}>
+              <div className="flex flex-col">
+                <span>{item.address[0]}</span>
+                <span>{item.address[1]}</span>
+              </div>
+              <button>
                 <Icon svg="/icons/MoreOptions.svg" props="rotate-90" />
               </button>
-              {selectedRow === index && <UserOptions status={item.status} />}
+              {/* {selectedRow === item.id && (
+                <DeliveryOptions status={item.status} />
+              )} */}
             </td>
           </tr>
         ))}
@@ -52,4 +66,4 @@ const UsersTable = () => {
   );
 };
 
-export default UsersTable;
+export default VolunteersTable;

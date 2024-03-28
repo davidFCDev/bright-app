@@ -1,18 +1,18 @@
 import Button from "@/modules/common/button";
 import Icon from "@/modules/common/icons";
-import EmailInput from "@/modules/common/input-email";
-import NameImput from "@/modules/common/input-name";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { MdArrowDropDown } from "react-icons/md";
-import PhoneInput from "@/modules/common/input-phone";
-import UserInput from "@/modules/common/input-user";
-import SwitchInput from "@/modules/common/switch";
 import { useInterfaceContext } from "@/lib/context/interface-context";
+import LocationInput from "@/modules/common/input-location";
+import OrganizationInput from "@/modules/common/input-organization";
+import AddressInput from "@/modules/common/input-adress";
+import CityInput from "@/modules/common/input-city";
+import DeliveryInput from "@/modules/common/input-delivery";
 
-const UserAdd = () => {
+const DeliveryAdd = () => {
   const { showAdd, handleShowAdd } = useInterfaceContext();
-  
+
   return (
     <>
       <AnimatePresence>
@@ -27,7 +27,9 @@ const UserAdd = () => {
             <div className="flex items-end justify-between border-b border-neutral-300 w-full">
               <div className="flex items-end justify-between w-full py-5 px-8">
                 <div className="flex items-center gap-2 ">
-                  <h2 className="font-semibold text-xl">New user</h2>
+                  <h2 className="font-semibold text-xl">
+                    New Delivery Location
+                  </h2>
                   <div className="flex items-center border border-primary text-primary bg-terciary px-2 py-1">
                     <span className="text-xs">Active</span>
                     <MdArrowDropDown />
@@ -39,14 +41,11 @@ const UserAdd = () => {
               </div>
             </div>
             <form className="flex flex-col gap-5 py-5 px-8 text-sm">
-              <NameImput showIcon={false} />
-              <EmailInput />
-              <PhoneInput />
-              <UserInput />
-              <div className="flex items-center gap-2">
-                <SwitchInput />
-                <p className="font-semibold text-neutral-800">Notify via email about new requests</p>
-              </div>
+              <OrganizationInput />
+              <LocationInput />
+              <AddressInput />
+              <CityInput />
+              <DeliveryInput />
               <hr className="border border-neutral-200 w-full" />
               <div className="w-full flex justify-end">
                 <Button text="Save" />
@@ -59,4 +58,4 @@ const UserAdd = () => {
   );
 };
 
-export default UserAdd;
+export default DeliveryAdd;

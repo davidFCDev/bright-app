@@ -40,15 +40,28 @@ export interface UsersTable {
   }
 
 export interface DeliveryTable {
-  status: string,
-  organization: string,
-    location: string,
-    address: [
+  id: number;
+  status: string;
+  organization: string;
+  location: string;
+  address: [
       string,
       string
-    ]
-    volunteers: number
+    ];
+  volunteers: number;
+  lat: number;
+  long: number;
+  max_distance: number;
+  zips: [number, number],
 }
+
+export interface VolunteerTable {
+    status: string;
+    name: string;
+    email: string;
+    phone: string;
+    address: [string, string];
+  }
 
 export interface AgeTable {
     age: string;

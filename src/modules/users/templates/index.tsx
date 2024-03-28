@@ -6,11 +6,11 @@ import Filters from "@/modules/common/filters";
 import UsersTable from "../components/users-table";
 import UserAdd from "../components/user-add";
 import UserEdit from "../components/user-edit";
-import { useUsersContext } from "@/lib/context/users-context";
+import { useInterfaceContext } from "@/lib/context/interface-context";
 
 
 const UsersTemplate = () => {
-  const {handleShowAdd} = useUsersContext();
+  const {handleShowAdd} = useInterfaceContext();
 
   return (
     <div className="page relative">

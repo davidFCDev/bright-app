@@ -11,6 +11,7 @@ import {
   Route,
   StatsTable,
   UsersTable,
+  VolunteerTable,
 } from "@/types";
 import Icon from "@/modules/common/icons";
 
@@ -235,6 +236,7 @@ export const USERS_TABLE: UsersTable[] = [
 
 export const DELIVERY_TABLE: DeliveryTable[] = [
   {
+    id: 1,
     status: "Active",
     organization: "Life Church",
     location: "Mustang",
@@ -242,9 +244,14 @@ export const DELIVERY_TABLE: DeliveryTable[] = [
       "1052 E State Highway 152",
       "Mustang, OK 73064"
     ],
-    volunteers: 2
+    volunteers: 2,
+    lat: 35.3844,
+    long: 35.3844,
+    max_distance: 20,
+    zips: [73064, 73099],
   },
   {
+    id: 2,
     status: "Active",
     organization: "Life Church",
     location: "South OKC",
@@ -252,9 +259,14 @@ export const DELIVERY_TABLE: DeliveryTable[] = [
       "1052 E State Highway 152",
       "Mustang, OK 73064"
     ],
-    volunteers: 1
+    volunteers: 1,
+    lat: 35.3844,
+    long: 35.3844,
+    max_distance: 20,
+    zips: [73064, 73099],
   },
   {
+    id: 3,
     status: "Active",
     organization: "Act of Love",
     location: "Mustang",
@@ -262,9 +274,14 @@ export const DELIVERY_TABLE: DeliveryTable[] = [
       "1052 E State Highway 152",
       "Mustang, OK 73064"
     ],
-    volunteers: 5
+    volunteers: 5,
+    lat: 35.3844,
+    long: 35.3844,
+    max_distance: 20,
+    zips: [73064, 73099],
   },
   {
+    id: 4,
     status: "Active",
     organization: "Anna's Home",
     location: "Mustang",
@@ -272,9 +289,14 @@ export const DELIVERY_TABLE: DeliveryTable[] = [
       "1052 E State Highway 152",
       "Mustang, OK 73064"
     ],
-    volunteers: 1
+    volunteers: 1,
+    lat: 35.3844,
+    long: 35.3844,
+    max_distance: 20,
+    zips: [73064, 73099],
   },
   {
+    id: 5,
     status: "Active",
     organization: "Nine",
     location: "Mustang",
@@ -282,9 +304,14 @@ export const DELIVERY_TABLE: DeliveryTable[] = [
       "1052 E State Highway 152",
       "Mustang, OK 73064"
     ],
-    volunteers: 3
+    volunteers: 3,
+    lat: 35.3844,
+    long: 35.3844,
+    max_distance: 20,
+    zips: [73064, 73099],
   },
   {
+    id: 6,
     status: "Inactive",
     organization: "Foster Care",
     location: "Mustang",
@@ -292,7 +319,54 @@ export const DELIVERY_TABLE: DeliveryTable[] = [
       "1052 E State Highway 152",
       "Mustang, OK 73064"
     ],
-    volunteers: 2
+    volunteers: 2,
+    lat: 35.3844,
+    long: 35.3844,
+    max_distance: 20,
+    zips: [73064, 73099],
+  },
+]
+
+export const VOLUNTEERS_TABLE: VolunteerTable[] = [
+  {
+    status: "Active",
+    name: "Kianna Bator",
+    email: "kiannab@gmail.com",
+    phone: "(206) 342-8631",
+    address: [
+      "1052 E State Highway 152",
+      "Mustang, OK 73064"
+    ]
+  },
+  {
+    status: "Active",
+    name: "Zaire Franci",
+    email: "zairefranc@gmail.com",
+    phone: "(206) 342-8631",
+    address: [
+      "1052 E State Highway 152",
+      "Mustang, OK 73064"
+    ]
+  },
+  {
+    status: "Active",
+    name: "Marley Geidt Bator",
+    email: "marleygeidt@gmail.com",
+    phone: "(206) 342-8631",
+    address: [
+      "1052 E State Highway 152",
+      "Mustang, OK 73064"
+    ]
+  },
+  {
+    status: "Inactive",
+    name: "Kianna Septimus",
+    email: "septimusk@gmail.com",
+    phone: "(206) 342-8631",
+    address: [
+      "1052 E State Highway 152",
+      "Mustang, OK 73064"
+    ]
   },
 ]
 

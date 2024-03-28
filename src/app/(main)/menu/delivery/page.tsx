@@ -1,4 +1,4 @@
-import DeliveryTemplate from "@/modules/delivery/templates";
+import DeliveryTemplate from "@/modules/delivery/templates/deliveryTemplate";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

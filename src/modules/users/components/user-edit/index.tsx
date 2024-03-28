@@ -1,18 +1,18 @@
 import Button from "@/modules/common/button";
 import Icon from "@/modules/common/icons";
-import EmailInput from "@/modules/common/email-input";
-import NameImput from "@/modules/common/name-input";
+import EmailInput from "@/modules/common/input-email";
+import NameImput from "@/modules/common/input-name";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { MdArrowDropDown } from "react-icons/md";
-import PhoneInput from "@/modules/common/phone-input";
-import UserInput from "@/modules/common/user-input";
+import PhoneInput from "@/modules/common/input-phone";
+import UserInput from "@/modules/common/input-user";
 import SwitchInput from "@/modules/common/switch";
 import QuickActions from "../quick-actions";
-import { useUsersContext } from "@/lib/context/users-context";
+import { useInterfaceContext } from "@/lib/context/interface-context";
 
 const UserEdit = ({ user }: any) => {
-  const { showEdit, handleShowEdit } = useUsersContext();
+  const { showEdit, handleShowEdit } = useInterfaceContext();
 
   return (
     <>

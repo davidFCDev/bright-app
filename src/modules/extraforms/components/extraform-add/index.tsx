@@ -1,7 +1,7 @@
 import Icon from "@/modules/common/icons";
 import { AnimatePresence, motion } from "framer-motion";
-import NameImput from "../../../common/name-input";
-import EmailInput from "../../../common/email-input";
+import NameImput from "../../../common/input-name";
+import EmailInput from "../../../common/input-email";
 import OutButton from "@/modules/common/outline-button";
 import Button from "@/modules/common/button";
 

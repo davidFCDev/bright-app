@@ -1,21 +1,21 @@
-import { useUsersContext } from "@/lib/context/users-context";
+import { useInterfaceContext } from "@/lib/context/interface-context";
 import Icon from "@/modules/common/icons";
 import Line from "@/modules/common/line";
 import React from "react";
 
-interface OptionsButtonProps {
+interface UserOptionsProps {
   status: string;
 }
 
-const OptionsButton = ({
-  status,
-}: OptionsButtonProps) => {
+const UserOptions = ({ status }: UserOptionsProps) => {
+  const { handleShowEdit } = useInterfaceContext();
 
-  const { showEdit, handleShowEdit } = useUsersContext();
-  
   return (
     <button className="w-48 z-20 flex flex-col items-start p-6 gap-3 bg-white border border-neutral-300 absolute right-12 top-0 rounded-[2px] font-semibold text-neutral-700 text-sm">
-      <button onClick={handleShowEdit} className="flex gap-2 items-center hover:scale-105">
+      <button
+        onClick={handleShowEdit}
+        className="flex gap-2 items-center hover:scale-105"
+      >
         <Icon svg="/icons/Edit.svg" width={18} />
         <span>Edit</span>
       </button>
@@ -41,4 +41,4 @@ const OptionsButton = ({
   );
 };
 
-export default OptionsButton;
+export default UserOptions;
