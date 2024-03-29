@@ -6,9 +6,11 @@ import {
   DeliveryTable,
   ExtraFormsTable,
   MessageList,
+  Messages,
   MyStats,
   NameList,
   NewRequestTable,
+  RequestList,
   RequestsTable,
   Route,
   StatsTable,
@@ -16,6 +18,7 @@ import {
   VolunteerTable,
 } from "@/types";
 import Icon from "@/modules/common/icons";
+import User from "@/modules/messages/components/user";
 
 export const VOL_ROUTES: Route[] = [
   {
@@ -99,6 +102,7 @@ export const NEW_REQUEST_TABLE: NewRequestTable[] = [
 
 export const REQUESTS_TABLE: RequestsTable[] = [
   {
+    id: 1,
     status: "New",
     assigned: (
       <select>
@@ -106,42 +110,47 @@ export const REQUESTS_TABLE: RequestsTable[] = [
       </select>
     ),
     name: "Marilyn Lipshutz",
-    children: 2,
+    child: 2,
     date: "02/12/2024, 11:21 am",
   },
   {
+    id: 2,
     status: "Assigned",
     assigned: "Cheyenne Septimus",
     name: "Anna Thompson",
-    children: 1,
+    child: 1,
     date: "02/12/2024, 11:21 am",
   },
   {
+    id: 3,
     status: "Assigned",
     assigned: "Talan Kenter",
     name: "Adison Philips",
-    children: 1,
+    child: 1,
     date: "02/12/2024, 11:21 am",
   },
   {
+    id: 4,
     status: "Assigned",
     assigned: "Gretchen Workman",
     name: "Nolan Gouse",
-    children: 1,
+    child: 1,
     date: "02/12/2024, 11:21 am",
   },
   {
+    id: 5,
     status: "Assigned",
     assigned: "Jaxson Franci",
     name: "Madelyn Torff",
-    children: 1,
+    child: 1,
     date: "02/12/2024, 11:21 am",
   },
   {
+    id: 6,
     status: "Assigned",
     assigned: "Jaxson Workman",
     name: "Hanna Kenter",
-    children: 1,
+    child: 1,
     date: "02/12/2024, 11:21 am",
   },
 ];
@@ -516,6 +525,7 @@ export const AGENCIES_LIST: AgenciesList = {
 export const MESSAGES_LIST: MessageList[] = [
   {
     name: "Aspen Dorwart",
+    number: 1,
     message:
       "Nunc suscipit risus ligula, malesuada mattis ante lacinia at. Maecenas maximu...",
     time: "2m ago",
@@ -543,5 +553,83 @@ export const MESSAGES_LIST: MessageList[] = [
     message:
       "Nunc suscipit risus ligula, malesuada mattis ante lacinia at. Maecenas maximu...",
     time: "02:20",
+  },
+];
+
+export const MESSAGES_TEXT: Messages = {
+  message1: {
+    name: "Marilyn Vetrovs",
+    time: "11:18am",
+    text: "Nullam id augue bibendum, facilisis libero nec, sagittis elit. Vivamus vulputate massa eget metus sollicitudin congue. Quisque eu lobortis mauris.",
+  },
+  message2: {
+    name: "Marilyn Vetrovs",
+    time: "11:18am",
+    text: "Nullam id augue bibendum, facilisis libero nec, sagittis elit.",
+    user: (
+      <User
+        name="Robert Miller"
+        status="New"
+        child="2"
+        date="02/12/2024, 11:21 am"
+      />
+    ),
+  },
+  message3: {
+    text: "Nullam id augue bibendum, facilisis libero nec, sagittis elit. Vivamus vulputate massa eget metus sollicitudin congue. Quisque eu lobortis mauris.",
+  },
+  message4: {
+    text: "Vivamus vulputate massa eget!",
+  },
+};
+
+export const REQUEST_LIST: RequestList[] = [
+  {
+    name: "Robert Miller",
+    child: "2",
+    status: "New",
+    date: "02/12/2024, 11:21 am",
+  },
+  {
+    name: "Anna Thompson",
+    child: "1",
+    status: "New",
+    date: "02/12/2024, 11:21 am",
+  },
+  {
+    name: "Marilyn Lipshutz",
+    child: "2",
+    status: "Assigned",
+    date: "02/12/2024, 11:21 am",
+  },
+  {
+    name: "Anna Thompson",
+    child: "1",
+    status: "Assigned",
+    date: "02/12/2024, 11:21 am",
+  },
+  {
+    name: "Adison Philips",
+    child: "1",
+    status: "Assigned",
+    date: "02/12/2024, 11:21 am",
+  },
+  {
+    name: "Nolan Gouse",
+    child: "1",
+    status: "Assigned",
+    date: "02/12/2024, 11:21 am",
+  },
+  {
+    name: "Madelyn Torff",
+    child: "1",
+    status: "Assigned",
+    date: "02/12/2024, 11:21 am",
+  },
+  {
+    name: "Hanna Kenter",
+    child: "1",
+    status: "Assigned",
+    date: "02/12/2024, 11:21 am",
   },
 ];

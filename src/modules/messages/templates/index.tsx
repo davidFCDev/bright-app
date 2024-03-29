@@ -10,6 +10,7 @@ import ChatAdd from "../components/add-chat";
 
 const MessagesTemplate = () => {
   const { handleShowAdd } = useInterfaceContext();
+
   return (
     <div className="relative">
       <div className="flex items-center justify-between w-full px-8 py-4">
@@ -24,12 +25,21 @@ const MessagesTemplate = () => {
 
       <Line />
 
-      <div className="w-full flex ">
-        <MessagesList />
+      <div className="w-full flex">
+        <div className="max-w-sm">
+          <MessagesList />
+        </div>
 
-        <Chat />
+        <div className="px-12 py-4 w-full">
+          <Chat />
+        </div>
 
         <ChatAdd />
+
+        {/* <ChatMiniviewLinkrequest /> */}
+        {/* <ChatMiniview /> */}
+        {/* <ChatMiniviewChat /> */}
+        {/* <LinkRequest /> */}
       </div>
     </div>
   );

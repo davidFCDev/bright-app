@@ -1,5 +1,5 @@
 "use client";
-import { DELIVERY_TABLE } from "@/constants";
+import { DELIVERY_TABLE, REQUESTS_TABLE } from "@/constants";
 import { useParams } from "next/navigation";
 import { createContext, ReactNode, useContext, useState } from "react";
 
@@ -12,6 +12,7 @@ export interface InterfaceContextProps {
   handleShowEdit: () => void;
   goBack: () => void;
   delivery: any;
+  request: any;
   selectedOption: [string, number] | null;
   toggleAgencyOptions: (letter: string, index: number) => void;
 }
@@ -41,6 +42,7 @@ export const InterfaceProvider = ({ children }: InterfaceProviderProps) => {
 
   const { id } = useParams() || { id: undefined };
   const delivery = DELIVERY_TABLE.find((item) => item.id === Number(id));
+  const request = REQUESTS_TABLE.find((item) => item.id === Number(id));
 
   const goBack = () => {
     window.history.back();
@@ -69,6 +71,7 @@ export const InterfaceProvider = ({ children }: InterfaceProviderProps) => {
         handleShowEdit,
         goBack,
         delivery,
+        request,
         selectedOption,
         toggleAgencyOptions,
       }}

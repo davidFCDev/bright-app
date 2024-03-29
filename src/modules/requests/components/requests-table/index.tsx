@@ -1,13 +1,13 @@
 import { REQUESTS_TABLE } from "@/constants";
 import CancelButton from "@/modules/common/cancel-button";
 import Icon from "@/modules/common/icons";
-import React, { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const RequestsTable = () => {
-  const [selectedRow, setSelectedRow] = useState<number | null>(null);
+  const router = useRouter();
 
-  const toggleCancelButton = (index: number) => {
-    setSelectedRow(selectedRow === index ? null : index);
+  const handlePreview = (id: number) => {
+    router.push(`/menu/requests/${id}`);
   };
 
   return (
@@ -26,12 +26,18 @@ const RequestsTable = () => {
       </thead>
       <tbody className="font-semibold text-neutral-600">
         {REQUESTS_TABLE.map((request, index) => (
-          <tr key={index} className="bg-neutral-50 border border-neutral-300">
+          <tr
+            onClick={() => handlePreview(request.id)}
+            key={index}
+            className="bg-neutral-50 border border-neutral-300 hover:cursor-pointer hover:bg-neutral-200"
+          >
             <td className="px-5 py-4 flex gap-5">
               <input type="checkbox" className="scale-125" />
               <div
                 className={`border px-2 py-1 ${
-                  request.status === "New" ? "text-primary border-primary bg-terciary" : "text-brown border-lightBrown"
+                  request.status === "New"
+                    ? "text-primary border-primary bg-terciary"
+                    : "text-brown border-lightBrown"
                 }`}
               >
                 {request.status}
@@ -39,15 +45,15 @@ const RequestsTable = () => {
             </td>
             <td className="px-5 py-4">{request.assigned}</td>
             <td className="px-5 py-4">{request.name}</td>
-            <td className="px-5 py-4">{request.children}</td>
+            <td className="px-5 py-4">{request.child}</td>
             <td className="px-5 py-4 flex items-center justify-between relative">
               {request.date}
-              <button
-                onClick={() => toggleCancelButton(index)}
-              >
+              <button>
                 <Icon svg="/icons/MoreOptions.svg" props="rotate-90" />
               </button>
-              {selectedRow === index && <CancelButton />}
+
+              {/* TODO:Logic for cancel button */}
+              {/* <CancelButton /> */}
             </td>
           </tr>
         ))}

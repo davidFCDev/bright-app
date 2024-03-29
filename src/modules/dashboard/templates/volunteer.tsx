@@ -7,7 +7,7 @@ import VolunteerData from "../components/volunteer-data";
 
 const DashboardTemplate = () => {
   return (
-    <div className="title">
+    <div className="page">
       <Message number={2} />
 
       <div className="flex flex-col items-start gap-6 w-full">

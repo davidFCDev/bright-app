@@ -16,10 +16,11 @@ export interface NewRequestTable {
   }
 
 export interface RequestsTable {
+    id: number;
     status: string;
     assigned: string | ReactNode;
     name: string;
-    children: number;
+    child: number;
     date: string;
   }
 
@@ -109,7 +110,25 @@ export interface AgenciesList {
 
 export interface MessageList {
     name: string;
+    number?: number;
     message: string;
     time: string;
   }
   
+export interface Message {
+    name?: string;
+    time?: string;
+    text: string;
+    user?: string | JSX.Element;
+  }
+  
+export interface Messages {
+    [key: string]: Message;
+  }
+
+export interface RequestList {
+    name: string;
+    child: string;
+    status: string;
+    date: string;
+  }

@@ -1,4 +1,4 @@
-import RequestsTemplate from "@/modules/requests/templates";
+import RequestsTemplate from "@/modules/requests/templates/request";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {

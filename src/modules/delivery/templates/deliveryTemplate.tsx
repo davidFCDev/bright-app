@@ -28,9 +28,9 @@ const DeliveryTemplate = () => {
           <Button text="+ Add Delivery Locations" onClick={handleShowAdd} />
         </div>
       </div>
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full items-start">
         <DeliveryFilters />
-        <Search />
+        <Search width="w-full" />
       </div>
       <DeliveryTable />
       <DeliveryAdd />

@@ -30,9 +30,9 @@ const DeliveryDetailsTemplate = () => {
 
         <Button text="+ Add Delivery Volunteer" onClick={handleShowAdd} />
       </div>
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full items-start">
         <DeliveryDetailFilters />
-        <Search />
+        <Search width="w-full" />
       </div>
 
       <VolunteersTable />

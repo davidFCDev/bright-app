@@ -23,9 +23,9 @@ const ExtraformsTemplate = () => {
         </div>
         <Button text="+ Send Form" onClick={handleShowForm} />
       </div>
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full items-start">
         <Filters />
-        <Search />
+        <Search width="w-full"/>
       </div>
       <ExtraFormsTable />
 

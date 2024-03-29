@@ -21,7 +21,7 @@ const AgenciesTemplate = () => {
         </div>
       </div>
 
-      <Search />
+      <Search width="w-full" />
 
       <AgenciesList />
       <AgencyAdd />

@@ -21,9 +21,9 @@ const UsersTemplate = () => {
         </div>
         <Button text="+ Add User" onClick={handleShowAdd} />
       </div>
-      <div className="flex flex-col gap-4 w-full">
+      <div className="flex flex-col gap-4 w-full items-start">
         <Filters />
-        <Search />
+        <Search width="w-full" />
       </div>
       <UsersTable />
       <UserAdd  />
