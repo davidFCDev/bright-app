@@ -7,7 +7,7 @@ const LoginTemplate = () => {
     
 
   return (
-    <main className="w-full bg-secondary">
+    <main className="w-full sm:bg-secondary">
       <div className="min-h-screen flex flex-col justify-center items-center">
         <div className="bg-white flex flex-col justify-center items-center gap-8 px-24 py-10">
           <Image src="/logo.png" alt="logo" width={220} height={70} />

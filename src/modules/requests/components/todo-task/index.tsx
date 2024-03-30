@@ -3,7 +3,7 @@ import React from "react";
 
 const TodoTask = () => {
   return (
-    <div className="w-1/4 flex flex-col gap-5 bg-terciary p-5 font-semibold">
+    <div className="hidden w-1/4 sm:flex flex-col gap-5 bg-terciary p-5 font-semibold">
       <h3>To do:</h3>
       <ul className="flex flex-col gap-6 px-5 pb-5 text-xs">
         <li className="flex items-center gap-2">

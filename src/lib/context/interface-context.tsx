@@ -19,6 +19,12 @@ export interface InterfaceContextProps {
   showNewChat: boolean;
   showDeliveryLocations: boolean;
   showDeliveryVolunteers: boolean;
+  showChat: boolean;
+  showLinkRequest: boolean;
+  showAssignRequest: boolean;
+  handleShowAssignRequest: () => void;
+  handleShowLinkRequest: () => void;
+  handleShowChat: () => void;
   handleShowDeliveryVolunteersAdd: () => void;
   handleShowDeliveryLocationsAdd: () => void;
   handleShowNewChat: () => void;
@@ -47,12 +53,15 @@ export const InterfaceProvider = ({ children }: InterfaceProviderProps) => {
   const [showUserAdd, setShowUserAdd] = useState(false);
   const [showUserEdit, setShowUserEdit] = useState(false);
   const [showNewChat, setShowNewChat] = useState(false);
+  const [showChat, setShowChat] = useState(false);
   const [showAgencyAdd, setShowAgencyAdd] = useState(false);
   const [showSendForm, setShowSendForm] = useState(false);
   const [showChildAdd, setShowChildAdd] = useState(false);
   const [showItemAdd, setShowItemAdd] = useState(false);
+  const [showLinkRequest, setShowLinkRequest] = useState(false);
   const [showDeliveryLocations, setShowDeliveryLocations] = useState(false);
   const [showDeliveryVolunteers, setShowDeliveryVolunteers] = useState(false);
+  const [showAssignRequest, setShowAssignRequest] = useState(false);
   const [selectedRow, setSelectedRow] = useState<number | null>(null);
   const [selectedItems, setSelectedItems] = useState<number[]>([]);
   const [toggleShow, setToggleShow] = useState<boolean[]>([true, true]);
@@ -89,7 +98,7 @@ export const InterfaceProvider = ({ children }: InterfaceProviderProps) => {
   const toggleOptions = (index: number) => {
     setSelectedRow(selectedRow === index ? null : index);
   };
-  
+
   const handleShowUserAdd = () => {
     setShowUserAdd(!showUserAdd);
     window.scrollTo({ top: 0, behavior: "smooth" });
@@ -136,6 +145,19 @@ export const InterfaceProvider = ({ children }: InterfaceProviderProps) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
+  const handleShowChat = () => {
+    setShowChat(!showChat);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleShowLinkRequest = () => {
+    setShowLinkRequest(!showLinkRequest);
+  };
+
+  const handleShowAssignRequest = () => {
+    setShowAssignRequest(!showAssignRequest);
+  };
+
   /** Router **/
   const { id } = useParams() || { id: undefined };
   const delivery = DELIVERY_TABLE.find((item) => item.id === Number(id));
@@ -162,6 +184,12 @@ export const InterfaceProvider = ({ children }: InterfaceProviderProps) => {
         handleShowNewChat,
         handleShowDeliveryLocationsAdd,
         handleShowDeliveryVolunteersAdd,
+        handleShowChat,
+        handleShowLinkRequest,
+        handleShowAssignRequest,
+        showAssignRequest,
+        showLinkRequest,
+        showChat,
         showDeliveryVolunteers,
         showDeliveryLocations,
         showNewChat,

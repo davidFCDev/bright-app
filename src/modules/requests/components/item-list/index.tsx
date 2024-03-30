@@ -6,7 +6,7 @@ const ItemsList = () => {
   const { selectedItems, handleItemClick } = useInterfaceContext();
   
   return (
-    <div className="flex items-center gap-3 text-sm font-semibold">
+    <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 text-base sm:text-sm font-semibold">
       <Item
         number="1st"
         text="Bed Frame"

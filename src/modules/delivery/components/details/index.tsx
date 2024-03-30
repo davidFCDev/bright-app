@@ -19,7 +19,7 @@ const Details = ({ delivery }: any) => {
         </button>
       </div>
 
-      <div className="flex items-start gap-32">
+      <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-32">
         <div className="flex flex-col gap-2">
           <p className="flex items-center gap-2 font-semibold">
             <Icon svg="/icons/Delivery.svg" width={16} />

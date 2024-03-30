@@ -4,9 +4,10 @@ import Button from "@/modules/common/button";
 import Icon from "@/modules/common/icons";
 import Line from "@/modules/common/line";
 import React from "react";
-import MessagesList from "../components/messages-list";
+import ChatsList from "../components/chats-list";
 import Chat from "../components/chat";
 import ChatAdd from "../components/add-chat";
+import LinkRequest from "../components/link-request";
 
 const MessagesTemplate = () => {
   const { handleShowNewChat } = useInterfaceContext();
@@ -26,20 +27,16 @@ const MessagesTemplate = () => {
       <Line />
 
       <div className="w-full flex">
-        <div className="max-w-sm">
-          <MessagesList />
+        <div className="w-full sm:max-w-sm">
+          <ChatsList />
         </div>
 
-        <div className="px-12 py-4 w-full">
+        <div className="hidden sm:block px-12 py-4 w-full">
           <Chat />
         </div>
 
+        <LinkRequest />
         <ChatAdd />
-
-        {/* <ChatMiniviewLinkrequest /> */}
-        {/* <ChatMiniview /> */}
-        {/* <ChatMiniviewChat /> */}
-        {/* <LinkRequest /> */}
       </div>
     </div>
   );

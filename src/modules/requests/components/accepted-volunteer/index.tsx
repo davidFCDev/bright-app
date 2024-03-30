@@ -5,7 +5,7 @@ import React from "react";
 const AcceptedVolunteer = () => {
   return (
     <div className="flex flex-col w-full gap-6 text-sm border border-neutral-300 p-5">
-      <div className="flex items-center gap-32">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-8 sm:gap-32">
         <div className="flex flex-col gap-3">
           <div className="flex items-center gap-1">
             <Icon svg="/icons/Users.svg" width={18} />

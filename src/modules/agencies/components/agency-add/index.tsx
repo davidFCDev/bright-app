@@ -17,7 +17,7 @@ const AgencyAdd = () => {
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.5 }}
-            className="z-20 w-2/5 absolute h-full bg-white right-0 border-l border-neutral-300"
+            className="z-20 w-full sm:w-2/5 absolute h-full bg-white right-0 border-l border-neutral-300"
           >
             <div className="flex items-end justify-between border-b border-neutral-300 w-full">
               <div className="flex items-end justify-between w-full py-5 px-8">
@@ -33,7 +33,7 @@ const AgencyAdd = () => {
               <AgencyInput />
               <hr className="border border-neutral-200 w-full" />
               <div className="w-full flex justify-end">
-                <Button text="Save" />
+                <Button text="Save" props={"w-full sm:w-fit"} />
               </div>
             </form>
           </motion.div>

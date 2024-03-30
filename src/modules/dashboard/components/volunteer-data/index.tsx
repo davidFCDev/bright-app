@@ -5,16 +5,16 @@ import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
 
 const VolunteerData = () => {
   return (
-    <div className="w-full relative flex items-center justify-between border border-neutral-300">
+    <div className="w-full relative grid grid-cols-2 sm:flex items-center justify-between border border-neutral-300">
       <Image
         src="/ActiveDot.png"
         alt="chart"
         width={20}
         height={20}
-        className="absolute top-2 left-2"
+        className="absolute top-2 left-2 hidden sm:block"
       />
       {MY_STATS.map((stat, index) => (
-        <div key={index} className="flex items-center gap-6 p-6 w-full">
+        <div key={index} className="flex items-center gap-3 sm:gap-6 p-4 sm:p-6 w-full">
           {stat.icon}
           <div className="flex flex-col gap-2 items-start">
             <p className="flex items-center text-2xl font-semibold">

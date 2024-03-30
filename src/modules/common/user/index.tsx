@@ -2,9 +2,9 @@ import Icon from "@/modules/common/icons";
 import { RequestList } from "@/types";
 import React from "react";
 
-const User = ({ name, status, child, date }: RequestList) => {
+const UserBox = ({ name, status, child, date }: RequestList) => {
   return (
-    <div className="bg-white flex flex-col gap-2 text-black px-3 py-3 rounded border border-neutral-200">
+    <div className="bg-white hover:bg-gray-200 hover:cursor-pointer flex flex-col gap-2 text-black px-3 py-3 rounded border border-neutral-200">
       <div className="flex items-center justify-between">
         <p className="font-semibold">{name}</p>
         <div
@@ -31,4 +31,4 @@ const User = ({ name, status, child, date }: RequestList) => {
   );
 };
 
-export default User;
+export default UserBox;

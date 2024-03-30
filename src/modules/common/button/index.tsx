@@ -10,7 +10,7 @@ const Button = ({ text, props, onClick }: ButtonProps) => {
   return (
     <button
       onClick={onClick}
-      className={`${props} px-4 py-2 bg-primary text-white rounded-[2px] hover:bg-secondary`}
+      className={`${props} px-4 py-2 text-xs sm:text-sm bg-primary text-white rounded-[2px] hover:bg-secondary`}
     >
       <span>{text}</span>
     </button>

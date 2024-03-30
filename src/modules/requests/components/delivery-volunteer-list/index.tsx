@@ -3,7 +3,7 @@ import DeliveryVolunteer from "../delivery-volunteer";
 
 const DeliveryVolunteerList = () => {
   return (
-    <div className="w-full flex items-start gap-4">
+    <div className="w-full flex flex-col sm:flex-row items-start gap-4">
       <DeliveryVolunteer
         name="Jakob Philips"
         location="Life Church - Mustang"

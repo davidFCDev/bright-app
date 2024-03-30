@@ -19,7 +19,7 @@ import {
   VolunteerTable,
 } from "@/types";
 import Icon from "@/modules/common/icons";
-import User from "@/modules/messages/components/user";
+import UserBox from "@/modules/common/user";
 
 export const VOL_ROUTES: Route[] = [
   {
@@ -568,7 +568,7 @@ export const MESSAGES_TEXT: Messages = {
     time: "11:18am",
     text: "Nullam id augue bibendum, facilisis libero nec, sagittis elit.",
     user: (
-      <User
+      <UserBox
         name="Robert Miller"
         status="New"
         child="2"

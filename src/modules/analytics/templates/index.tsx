@@ -11,7 +11,7 @@ import ChildrenServed from "../components/children-served";
 const AnalyticsTemplate = () => {
   return (
     <div className="page">
-      <div className="flex items-center justify-between w-full">
+      <div className="flex flex-col sm:flex-row gap-4 sm:gap-0 items-start sm:items-center justify-between w-full">
         <div className="title">
           <Icon svg="/icons/Stats.svg" />
           <h2>Analytics</h2>

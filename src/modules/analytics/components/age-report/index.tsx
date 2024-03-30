@@ -22,8 +22,8 @@ const AgeReport = () => {
         />
       </button>
       {toggleShow[0] && (
-        <div className="flex items-center justify-end w-full">
-          <div className="w-[25%] mx-10">
+        <div className="flex flex-col gap-5 sm:gap-0 sm:flex-row items-center justify-end w-full">
+          <div className="sm:w-[25%] ml-14 sm:mx-10">
             <Image
               src="/rounded-chart.png"
               alt="chart"
@@ -31,7 +31,7 @@ const AgeReport = () => {
               height={300}
             />
           </div>
-          <div className="w-[75%]">
+          <div className="sm:w-[75%]">
             <AgeTable />
           </div>
         </div>

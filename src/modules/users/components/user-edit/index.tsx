@@ -1,6 +1,6 @@
 import Button from "@/modules/common/button";
 import Icon from "@/modules/common/icons";
-import EmailInput from "@/modules/common/input-email";
+import MailInput from "@/modules/common/input-email";
 import NameImput from "@/modules/common/input-name";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
@@ -12,18 +12,18 @@ import QuickActions from "../quick-actions";
 import { useInterfaceContext } from "@/lib/context/interface-context";
 
 const UserEdit = ({ user }: any) => {
-  const { showUserEdit: showEdit, handleShowUserEdit: handleShowEdit } = useInterfaceContext();
+  const { showUserEdit, handleShowUserEdit } = useInterfaceContext();
 
   return (
     <>
       <AnimatePresence>
-        {showEdit && (
+        {showUserEdit && (
           <motion.div
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
             transition={{ duration: 0.5 }}
-            className="z-20 w-2/5 absolute h-full bg-white right-0 border-l border-neutral-300"
+            className="z-20 w-full sm:w-2/5 absolute h-full bg-white right-0 border-l border-neutral-300"
           >
             <div className="flex items-end justify-between border-b border-neutral-300 w-full">
               <div className="flex items-end justify-between w-full py-5 px-8">
@@ -34,7 +34,7 @@ const UserEdit = ({ user }: any) => {
                     <MdArrowDropDown />
                   </div>
                 </div>
-                <button onClick={handleShowEdit}>
+                <button onClick={handleShowUserEdit}>
                   <Icon svg="/icons/Close.svg" />
                 </button>
               </div>
@@ -42,7 +42,7 @@ const UserEdit = ({ user }: any) => {
             <form className="flex flex-col gap-5 py-5 px-8 text-sm">
               <QuickActions />
               <NameImput showIcon={false} />
-              <EmailInput />
+              <MailInput />
               <PhoneInput />
               <UserInput />
               <div className="flex items-center gap-2">
@@ -53,7 +53,7 @@ const UserEdit = ({ user }: any) => {
               </div>
               <hr className="border border-neutral-200 w-full" />
               <div className="w-full flex justify-end">
-                <Button text="Save Changes and Close" />
+                <Button text="Save Changes and Close" props={"w-full sm:w-fit"} />
               </div>
             </form>
           </motion.div>

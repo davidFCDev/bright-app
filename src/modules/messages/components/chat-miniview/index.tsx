@@ -1,11 +1,12 @@
 import Icon from "@/modules/common/icons";
 import Line from "@/modules/common/line";
 import React from "react";
-import MessagesList from "../messages-list";
+import ChatsList from "../chats-list";
 
 const ChatMiniview = () => {
+
   return (
-    <div className="absolute z-20 w-2/5 h-full bg-white right-0 top-0 border-l border-neutral-300">
+    <div className="absolute z-20 w-full sm:w-2/5 h-full bg-white right-0 top-0 border-l border-neutral-300">
       <div className="flex items-end justify-between w-full py-5 px-8">
         <div className="flex items-center gap-2 ">
           <h2 className="font-semibold text-xl">Messages</h2>
@@ -21,7 +22,7 @@ const ChatMiniview = () => {
         </div>
       </div>
       <Line />
-      <MessagesList />
+      <ChatsList />
     </div>
   );
 };

@@ -36,7 +36,7 @@ const ItemsNeeded = () => {
             <div className="flex flex-col gap-3 w-full">
               <ItemsList />
 
-              <div className="w-full bg-terciary flex flex-col gap-1 text-sm px-5 py-3 ">
+              <div className="w-full bg-terciary flex flex-col gap-1 text-base sm:text-sm px-5 py-3 ">
                 <p className="font-semibold">Additional notes:</p>
                 <p>Lorem ipsum dolor sit amet.</p>
               </div>

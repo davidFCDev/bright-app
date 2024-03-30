@@ -22,8 +22,8 @@ const ChildrenServed = () => {
         />
       </button>
       {toggleShow[1] && (
-        <div className="flex items-center justify-end w-full">
-          <div className="w-[25%] mx-10">
+        <div className="flex flex-col sm:flex-row gap-5 sm:gap-0 items-center justify-end w-full">
+          <div className="sm:w-[25%] sm:mx-10">
             <Image
               src="/rounded-chart2.png"
               alt="chart"
@@ -31,7 +31,7 @@ const ChildrenServed = () => {
               height={200}
             />
           </div>
-          <div className="w-[75%]">
+          <div className="sm:w-[75%]">
             <CountryTable />
           </div>
         </div>

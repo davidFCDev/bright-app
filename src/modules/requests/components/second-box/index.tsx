@@ -9,7 +9,7 @@ interface SecondBoxProps {
 
 const SecondBox = ({ verified }: SecondBoxProps) => {
   return (
-    <div className="w-full h-full flex border border-brown p-5 items-start justify-between">
+    <div className="w-full h-full flex border border-brown p-3 sm:p-5 items-start justify-between">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-3">
           {verified && (
@@ -20,7 +20,7 @@ const SecondBox = ({ verified }: SecondBoxProps) => {
           )}
           <div className="flex items-center">
             <div className="flex items-center gap-2 font-semibold">
-              <h3 className="text-xl">Maren George</h3>
+              <h3 className="text-lg sm:text-xl">Maren George</h3>
               <p className="text-xs px-3 py-1 border border-brown text-brown">
                 Caseworker - Angels
               </p>

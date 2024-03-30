@@ -30,6 +30,14 @@ h3 {
   padding-bottom: 10rem;
 }
 
+@media only screen and (max-width: 600px) {
+  .page {
+    padding: 0 1rem;
+    padding-top: 0.75rem;
+    padding-bottom: 5rem; 
+  }
+}
+
 .title {
   display: flex;
   align-items: center;

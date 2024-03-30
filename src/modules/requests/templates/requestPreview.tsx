@@ -36,14 +36,11 @@ const RequestsPreviewTemplate = () => {
 
       <Line />
 
-      <RequestDate request={request} />
+      <RequestDate />
 
       <div className="w-full flex items-start gap-5">
-        <div className="flex flex-col gap-5 w-4/5 items-start">
-          <div className="w-full flex items-start gap-5 h-72">
-            {/* SEND VERIFICATION IN PROPS */}
-            {/* <FirstBox verified={true} /> */}
-
+        <div className="flex flex-col gap-5 w-full sm:w-4/5 items-start">
+          <div className="w-full flex flex-col sm:flex-row items-start gap-5 sm:h-72">
             <FirstBox />
             <SecondBox />
           </div>

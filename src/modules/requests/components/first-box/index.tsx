@@ -8,7 +8,7 @@ interface FirstBoxProps {
 
 const FirstBox = ({ verified }: FirstBoxProps) => {
   return (
-    <div className="w-full h-full flex border border-primary p-5 items-start justify-between">
+    <div className="w-full h-full flex border border-primary p-3 sm:p-5 items-start justify-between">
       <div className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           {verified && (
@@ -19,7 +19,7 @@ const FirstBox = ({ verified }: FirstBoxProps) => {
           )}
           <div className="flex items-center">
             <div className="flex items-center gap-2 font-semibold">
-              <h3 className="text-xl">Robert Miller</h3>
+              <h3 className="text-lg sm:text-xl">Robert Miller</h3>
               <p className="text-xs px-3 py-1 border border-primary text-primary bg-terciary">
                 Foster Parent
               </p>

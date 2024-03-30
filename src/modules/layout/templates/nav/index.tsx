@@ -12,9 +12,11 @@ interface RoutesProps {
 const NavbarTemplate = ({ routes }: RoutesProps) => {
   return (
     <AnimatePresence>
-      <Navbar routes={routes} />
+      <div className="hidden sm:block">
+        <Navbar routes={routes} />
 
-      <Minibar routes={routes} />
+        <Minibar routes={routes} />
+      </div>
     </AnimatePresence>
   );
 };

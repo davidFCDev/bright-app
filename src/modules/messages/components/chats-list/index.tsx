@@ -1,11 +1,13 @@
 import { MESSAGES_LIST } from "@/constants";
+import Link from "next/link";
 import React from "react";
 
-const MessagesList = () => {
+const ChatsList = () => {
+
   return (
     <div className="flex flex-col w-full text-sm">
       {MESSAGES_LIST.map((item, index) => (
-        <div
+        <Link href="/menu/messages/1"
           key={index}
           className="flex flex-col gap-2 border border-neutral-200 px-8 py-4 hover:bg-terciary hover:border-terciary hover:border-b hover:border-b-primary hover:cursor-pointer"
         >
@@ -33,10 +35,10 @@ const MessagesList = () => {
           >
             {item.message}
           </p>
-        </div>
+        </Link>
       ))}
     </div>
   );
 };
 
-export default MessagesList;
+export default ChatsList;

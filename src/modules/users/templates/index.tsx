@@ -7,10 +7,10 @@ import UsersTable from "../components/users-table";
 import UserAdd from "../components/user-add";
 import UserEdit from "../components/user-edit";
 import { useInterfaceContext } from "@/lib/context/interface-context";
-
+import ResponsiveUserTable from "../components/responsive-user-table";
 
 const UsersTemplate = () => {
-  const {handleShowUserAdd: handleShowAdd} = useInterfaceContext();
+  const { handleShowUserAdd } = useInterfaceContext();
 
   return (
     <div className="page relative">
@@ -19,14 +19,17 @@ const UsersTemplate = () => {
           <Icon svg="/icons/Users.svg" />
           <h2>Users</h2>
         </div>
-        <Button text="+ Add User" onClick={handleShowAdd} />
+        <Button text="+ Add User" onClick={handleShowUserAdd} />
       </div>
-      <div className="flex flex-col gap-4 w-full items-start">
+      <div className="flex flex-row-reverse sm:flex-col gap-4 w-full items-start">
         <Filters />
         <Search width="w-full" />
       </div>
       <UsersTable />
-      <UserAdd  />
+
+      <ResponsiveUserTable />
+
+      <UserAdd />
       <UserEdit user="Jaxson Geidt" />
     </div>
   );

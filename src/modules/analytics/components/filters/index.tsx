@@ -8,7 +8,7 @@ const Filters = () => {
       <OutButton
         text="Export"
         icon={<Icon svg="/icons/Download.svg" width={16} />}
-        props={"text-sm font-semibold"}
+        props={"text-sm font-semibold hidden sm:flex"}
       />
       <p className="text-neutral-400">Period</p>
       <select className="border border-neutral-300 px-2 py-1">

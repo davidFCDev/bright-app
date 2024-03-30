@@ -27,16 +27,16 @@ const Delivery = () => {
         </button>
         {toggleShow[5] && (
           <>
-            {accepted ? (
-              <div className="flex items-center gap-1 font-semibold text-xs border border-green-600 text-green-600 bg-terciary px-2 py-1">
-                <FaCircleCheck />
-                Accepted by Volunteer
-              </div>
-            ) : (
-              <div className="font-semibold text-xs border border-primary text-primary bg-terciary px-2 py-1">
+            <div className="flex items-center gap-1 font-semibold text-xs border border-green-600 text-green-600 bg-terciary px-2 py-1">
+              <FaCircleCheck />
+              Accepted by Volunteer
+            </div>
+
+            {/* ACCEPTED ?  */}
+
+            {/* <div className="font-semibold text-xs border border-primary text-primary bg-terciary px-2 py-1">
                 Delivery Request Sent
-              </div>
-            )}
+              </div> */}
           </>
         )}
       </div>
@@ -48,17 +48,20 @@ const Delivery = () => {
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
             transition={{ duration: 0.5 }}
+            className="w-full"
           >
             {/* TODO: MANAGE THE LOGIC */}
 
-            {/* <div className="w-full flex justify-center items-center py-4">
-        <p className="text-base font-semibold text-neutral-600">
-          Request has been sent to the relevant delivery volunteers. Wait for
-          them to answer.
-        </p>
-      </div> */}
+            {/* <AcceptedVolunteer /> */}
 
-            {accepted ? <AcceptedVolunteer /> : <DeliveryVolunteerList />}
+            {/* <div className="w-full flex justify-center items-center py-4">
+              <p className="text-base font-semibold text-neutral-600">
+                Request has been sent to the relevant delivery volunteers. Wait
+                for them to answer.
+              </p>
+            </div> */}
+
+            <DeliveryVolunteerList />
           </motion.div>
         </AnimatePresence>
       )}

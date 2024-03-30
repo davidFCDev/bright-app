@@ -15,7 +15,7 @@ const AgenciesList = () => {
             <h2 className="text-neutral-500 font-semibold text-xl">{letter}</h2>
             <Line />
           </div>
-          <ul className="flex items-center  gap-4">
+          <ul className="flex flex-wrap items-center gap-4">
             {AGENCIES_LIST[letter].map((agency, index) => (
               <li
                 onClick={() => toggleAgencyOptions(letter, index)}
