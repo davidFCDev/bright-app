@@ -11,7 +11,7 @@ import SwitchInput from "@/modules/common/switch";
 import { useInterfaceContext } from "@/lib/context/interface-context";
 
 const UserAdd = () => {
-  const { showAdd, handleShowAdd } = useInterfaceContext();
+  const { showUserAdd: showAdd, handleShowUserAdd: handleShowAdd } = useInterfaceContext();
 
   return (
     <>

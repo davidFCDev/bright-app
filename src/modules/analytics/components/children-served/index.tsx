@@ -2,13 +2,11 @@ import Icon from "@/modules/common/icons";
 import Image from "next/image";
 import React from "react";
 import CountryTable from "../country-table";
+import { useInterfaceContext } from "@/lib/context/interface-context";
 
-interface ChildrenServedProps {
-  handleToggle: (index: number) => void;
-  toggleShow: boolean[];
-}
+const ChildrenServed = () => {
+  const { toggleShow, handleToggle } = useInterfaceContext();
 
-const ChildrenServed = ({ handleToggle, toggleShow }: ChildrenServedProps) => {
   return (
     <div className="flex flex-col items-start gap-5 w-full">
       <button
@@ -20,7 +18,7 @@ const ChildrenServed = ({ handleToggle, toggleShow }: ChildrenServedProps) => {
         <Icon
           svg="/icons/DropDown.svg"
           width={18}
-          props={`${toggleShow ? "rotate-180" : ""}`}
+          props={`${toggleShow[1] ? "rotate-180" : ""}`}
         />
       </button>
       {toggleShow[1] && (

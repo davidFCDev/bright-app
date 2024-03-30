@@ -11,12 +11,13 @@ import CityInput from "@/modules/common/input-city";
 import DeliveryInput from "@/modules/common/input-delivery";
 
 const DeliveryAdd = () => {
-  const { showAdd, handleShowAdd } = useInterfaceContext();
+  const { showDeliveryLocations, handleShowDeliveryLocationsAdd } =
+    useInterfaceContext();
 
   return (
     <>
       <AnimatePresence>
-        {showAdd && (
+        {showDeliveryLocations && (
           <motion.div
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
@@ -35,7 +36,7 @@ const DeliveryAdd = () => {
                     <MdArrowDropDown />
                   </div>
                 </div>
-                <button onClick={handleShowAdd}>
+                <button onClick={handleShowDeliveryLocationsAdd}>
                   <Icon svg="/icons/Close.svg" />
                 </button>
               </div>

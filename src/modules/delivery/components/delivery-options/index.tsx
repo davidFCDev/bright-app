@@ -8,7 +8,7 @@ interface DeliveryOptionsProps {
 }
 
 const DeliveryOptions = ({ status }: DeliveryOptionsProps) => {
-  const { handleShowEdit } = useInterfaceContext();
+  const { handleShowUserEdit: handleShowEdit } = useInterfaceContext();
 
   return (
     <button className="w-72 z-20 flex flex-col items-start p-6 gap-3 bg-white border border-neutral-300 absolute right-12 top-0 rounded-[2px] font-semibold text-neutral-700 text-sm">

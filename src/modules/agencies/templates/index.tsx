@@ -7,7 +7,7 @@ import AgenciesList from "../components/agencies-list";
 import AgencyAdd from "../components/agency-add";
 
 const AgenciesTemplate = () => {
-  const { handleShowAdd } = useInterfaceContext();
+  const { handleShowAgencyAdd } = useInterfaceContext();
 
   return (
     <div className="page relative">
@@ -17,7 +17,7 @@ const AgenciesTemplate = () => {
           <h2>Agencies</h2>
         </div>
         <div className="flex items-center gap-4">
-          <Button text="+ Add Agency" onClick={() => handleShowAdd()} />
+          <Button text="+ Add Agency" onClick={() => handleShowAgencyAdd()} />
         </div>
       </div>
 

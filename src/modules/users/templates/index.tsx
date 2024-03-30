@@ -10,7 +10,7 @@ import { useInterfaceContext } from "@/lib/context/interface-context";
 
 
 const UsersTemplate = () => {
-  const {handleShowAdd} = useInterfaceContext();
+  const {handleShowUserAdd: handleShowAdd} = useInterfaceContext();
 
   return (
     <div className="page relative">

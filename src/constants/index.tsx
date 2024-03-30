@@ -5,6 +5,7 @@ import {
   CountryTable,
   DeliveryTable,
   ExtraFormsTable,
+  ItemsSentList,
   MessageList,
   Messages,
   MyStats,
@@ -631,5 +632,26 @@ export const REQUEST_LIST: RequestList[] = [
     child: "1",
     status: "Assigned",
     date: "02/12/2024, 11:21 am",
+  },
+];
+
+export const ITEMS_SENT_TABLE: ItemsSentList[] = [
+  {
+    status: "Delivered",
+    item: "Bottles",
+    qty: 10,
+    price: "$19.00",
+    bought_from: "Amazon",
+    date_sent: "02/12/2024, 11:21 am",
+    tracking: "4598...",
+  },
+  {
+    status: "Delivered",
+    item: "Bunk Bed",
+    qty: 1,
+    price: "$19.00",
+    bought_from: "Amazon",
+    date_sent: "02/12/2024, 11:21 am",
+    tracking: "4598...",
   },
 ];

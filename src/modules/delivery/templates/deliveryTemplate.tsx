@@ -10,7 +10,7 @@ import DeliveryAdd from "../components/delivery-add";
 import { useInterfaceContext } from "@/lib/context/interface-context";
 
 const DeliveryTemplate = () => {
-  const { handleShowAdd } = useInterfaceContext();
+  const { handleShowDeliveryLocationsAdd } = useInterfaceContext();
 
   return (
     <div className="page relative">
@@ -25,7 +25,7 @@ const DeliveryTemplate = () => {
             icon={<Icon svg="/icons/Download.svg" width={16} />}
             props={"text-sm font-semibold"}
           />
-          <Button text="+ Add Delivery Locations" onClick={handleShowAdd} />
+          <Button text="+ Add Delivery Locations" onClick={handleShowDeliveryLocationsAdd} />
         </div>
       </div>
       <div className="flex flex-col gap-4 w-full items-start">

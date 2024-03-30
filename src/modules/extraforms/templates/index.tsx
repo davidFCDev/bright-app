@@ -6,13 +6,10 @@ import ExtraFormsTable from "../components/extraforms-table";
 import Button from "@/modules/common/button";
 import Filters from "../../common/filters";
 import ExtraFormAdd from "../components/extraform-add";
+import { useInterfaceContext } from "@/lib/context/interface-context";
 
 const ExtraformsTemplate = () => {
-  const [showForm, setShowForm] = useState(false);
-
-  const handleShowForm = () => {
-    setShowForm(!showForm);
-  };
+  const { handleShowSendForm } = useInterfaceContext();
 
   return (
     <div className="page relative">
@@ -21,15 +18,15 @@ const ExtraformsTemplate = () => {
           <Icon svg="/icons/ExtraRequests.svg" />
           <h2>Requests</h2>
         </div>
-        <Button text="+ Send Form" onClick={handleShowForm} />
+        <Button text="+ Send Form" onClick={() => handleShowSendForm()} />
       </div>
       <div className="flex flex-col gap-4 w-full items-start">
         <Filters />
-        <Search width="w-full"/>
+        <Search width="w-full" />
       </div>
       <ExtraFormsTable />
 
-      <ExtraFormAdd showForm={showForm} handleShowForm={handleShowForm}/>
+      <ExtraFormAdd />
     </div>
   );
 };

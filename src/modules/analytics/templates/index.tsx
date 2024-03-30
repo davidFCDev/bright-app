@@ -8,19 +8,7 @@ import Filters from "../components/filters";
 import AgeReport from "../components/age-report";
 import ChildrenServed from "../components/children-served";
 
-interface AnalyticsTemplateProps {}
-
-const AnalyticsTemplate: React.FC<AnalyticsTemplateProps> = () => {
-  const [toggleShow, setToggleShow] = useState<boolean[]>([true, true]);
-
-  const handleToggle = (index: number) => {
-    setToggleShow((prevState) => {
-      const newState = [...prevState];
-      newState[index] = !newState[index];
-      return newState;
-    });
-  };
-
+const AnalyticsTemplate = () => {
   return (
     <div className="page">
       <div className="flex items-center justify-between w-full">
@@ -40,13 +28,9 @@ const AnalyticsTemplate: React.FC<AnalyticsTemplateProps> = () => {
       </div>
 
       <Line />
-
-      <AgeReport handleToggle={handleToggle} toggleShow={toggleShow} />
-
+      <AgeReport />
       <Line />
-
-      <ChildrenServed handleToggle={handleToggle} toggleShow={toggleShow} />
-
+      <ChildrenServed />
       <Line />
 
       <div className="flex items-center gap-2">

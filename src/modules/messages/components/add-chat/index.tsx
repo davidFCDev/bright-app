@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 
 const ChatAdd = () => {
-  const { showAdd, handleShowAdd } = useInterfaceContext();
+  const { showNewChat, handleShowNewChat } = useInterfaceContext();
 
   const NAMES = [
     "Talan Torff",
@@ -21,7 +21,7 @@ const ChatAdd = () => {
   return (
     <>
       <AnimatePresence>
-        {showAdd && (
+        {showNewChat && (
           <motion.div
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
@@ -34,7 +34,7 @@ const ChatAdd = () => {
                 <div className="flex items-center gap-2 ">
                   <h2 className="font-semibold text-xl">New Chat</h2>
                 </div>
-                <button onClick={handleShowAdd}>
+                <button onClick={handleShowNewChat}>
                   <Icon svg="/icons/Close.svg" />
                 </button>
               </div>

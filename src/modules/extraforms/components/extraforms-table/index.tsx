@@ -1,7 +1,6 @@
 "use client";
 import { EXTRA_FORMS_TABLE } from "@/constants";
 import Icon from "@/modules/common/icons";
-import React, { useState } from "react";
 
 const ExtraFormsTable = () => {
   return (
@@ -16,6 +15,7 @@ const ExtraFormsTable = () => {
           <th className="px-5 py-3">Name</th>
           <th className="px-5 py-3"># of Children</th>
           <th className="px-5 py-3">Date</th>
+          <th className="px-5 py-3"></th>
         </tr>
       </thead>
       <tbody className="font-semibold text-neutral-600">
@@ -36,8 +36,8 @@ const ExtraFormsTable = () => {
             <td className="px-5 py-4">{item.name}</td>
             <td className="px-5 py-4">{item.mail}</td>
             <td className="px-5 py-4">{item.date_sent}</td>
-            <td className="px-5 py-4 flex items-center justify-between">
-              {item.request}
+            <td className="px-5 py-4">{item.request}</td>
+            <td className="px-5 py-4">
               <button>
                 <Icon svg="/icons/Resend.svg" />
               </button>

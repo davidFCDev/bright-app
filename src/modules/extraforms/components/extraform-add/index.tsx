@@ -4,17 +4,15 @@ import NameImput from "../../../common/input-name";
 import EmailInput from "../../../common/input-email";
 import OutButton from "@/modules/common/outline-button";
 import Button from "@/modules/common/button";
+import { useInterfaceContext } from "@/lib/context/interface-context";
 
-interface ExtraFormAddProps {
-  showForm: boolean;
-  handleShowForm: () => void;
-}
+const ExtraFormAdd = () => {
+  const { showSendForm, handleShowSendForm } = useInterfaceContext();
 
-const ExtraFormAdd = ({ showForm, handleShowForm }: ExtraFormAddProps) => {
   return (
     <>
       <AnimatePresence>
-        {showForm && (
+        {showSendForm && (
           <motion.div
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
@@ -27,13 +25,13 @@ const ExtraFormAdd = ({ showForm, handleShowForm }: ExtraFormAddProps) => {
                 <h2 className="font-semibold text-xl">
                   Send Extra Request Form (2)
                 </h2>
-                <button onClick={handleShowForm}>
+                <button onClick={() => handleShowSendForm()}>
                   <Icon svg="/icons/Close.svg" />
                 </button>
               </div>
             </div>
             <form className="flex flex-col gap-5 py-5 px-8 text-sm">
-              <NameImput showIcon={true}/>
+              <NameImput showIcon={true} />
               <EmailInput />
               <hr className="border border-neutral-200 w-full" />
               <NameImput showIcon={true} />

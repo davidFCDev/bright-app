@@ -2,13 +2,11 @@ import Icon from "@/modules/common/icons";
 import React from "react";
 import AgeTable from "../age-table";
 import Image from "next/image";
+import { useInterfaceContext } from "@/lib/context/interface-context";
 
-interface AgeReportProps {
-  handleToggle: (index: number) => void;
-  toggleShow: boolean[];
-}
+const AgeReport = () => {
+  const { toggleShow, handleToggle } = useInterfaceContext();
 
-const AgeReport = ({ handleToggle, toggleShow }: AgeReportProps) => {
   return (
     <div className="flex flex-col items-start gap-5 w-full">
       <button
@@ -20,7 +18,7 @@ const AgeReport = ({ handleToggle, toggleShow }: AgeReportProps) => {
         <Icon
           svg="/icons/DropDown.svg"
           width={18}
-          props={`${toggleShow ? "rotate-180" : ""}`}
+          props={`${toggleShow[0] ? "rotate-180" : ""}`}
         />
       </button>
       {toggleShow[0] && (

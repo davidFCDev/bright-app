@@ -132,3 +132,13 @@ export interface RequestList {
     status: string;
     date: string;
   }
+
+export interface ItemsSentList {
+    status: string,
+    item: string,
+    qty: number,
+    price: string,
+    bought_from: string,
+    date_sent: string,
+    tracking: string,
+}

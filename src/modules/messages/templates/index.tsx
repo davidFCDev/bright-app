@@ -9,7 +9,7 @@ import Chat from "../components/chat";
 import ChatAdd from "../components/add-chat";
 
 const MessagesTemplate = () => {
-  const { handleShowAdd } = useInterfaceContext();
+  const { handleShowNewChat } = useInterfaceContext();
 
   return (
     <div className="relative">
@@ -19,7 +19,7 @@ const MessagesTemplate = () => {
           <h2>Messages</h2>
         </div>
         <div className="flex items-center gap-4">
-          <Button text="+ New Chat" onClick={() => handleShowAdd()} />
+          <Button text="+ New Chat" onClick={() => handleShowNewChat()} />
         </div>
       </div>
 

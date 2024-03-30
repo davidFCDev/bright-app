@@ -6,12 +6,12 @@ import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 
 const AgencyAdd = () => {
-  const { showAdd, handleShowAdd } = useInterfaceContext();
+  const { showAgencyAdd, handleShowAgencyAdd } = useInterfaceContext();
 
   return (
     <>
       <AnimatePresence>
-        {showAdd && (
+        {showAgencyAdd && (
           <motion.div
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
@@ -24,7 +24,7 @@ const AgencyAdd = () => {
                 <div className="flex items-center gap-2 ">
                   <h2 className="font-semibold text-xl">New Agency</h2>
                 </div>
-                <button onClick={handleShowAdd}>
+                <button onClick={handleShowAgencyAdd}>
                   <Icon svg="/icons/Close.svg" />
                 </button>
               </div>

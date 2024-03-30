@@ -12,11 +12,12 @@ import PhoneInput from "@/modules/common/input-phone";
 import StateInput from "@/modules/common/input-state";
 
 const DeliveryAddPerson = () => {
-  const { showAdd, handleShowAdd } = useInterfaceContext();
+  const { showDeliveryVolunteers, handleShowDeliveryVolunteersAdd } =
+    useInterfaceContext();
 
   return (
     <>
-      {showAdd && (
+      {showDeliveryVolunteers && (
         <AnimatePresence>
           <motion.div
             initial={{ x: "100%" }}
@@ -36,7 +37,7 @@ const DeliveryAddPerson = () => {
                     <MdArrowDropDown />
                   </div>
                 </div>
-                <button onClick={handleShowAdd}>
+                <button onClick={handleShowDeliveryVolunteersAdd}>
                   <Icon svg="/icons/Close.svg" />
                 </button>
               </div>

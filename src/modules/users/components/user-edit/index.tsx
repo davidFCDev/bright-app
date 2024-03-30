@@ -12,7 +12,7 @@ import QuickActions from "../quick-actions";
 import { useInterfaceContext } from "@/lib/context/interface-context";
 
 const UserEdit = ({ user }: any) => {
-  const { showEdit, handleShowEdit } = useInterfaceContext();
+  const { showUserEdit: showEdit, handleShowUserEdit: handleShowEdit } = useInterfaceContext();
 
   return (
     <>

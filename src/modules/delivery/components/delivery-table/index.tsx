@@ -25,6 +25,7 @@ const DeliveryTable = () => {
           <th className="px-5 py-3">Location</th>
           <th className="px-5 py-3">Address</th>
           <th className="px-5 py-3">Volunteers #</th>
+          <th className="px-5 py-3"></th>
         </tr>
       </thead>
       <tbody className="font-semibold text-neutral-600">
@@ -54,8 +55,8 @@ const DeliveryTable = () => {
                 <span>{item.address[1]}</span>
               </div>
             </td>
-            <td className="px-5 py-4 flex items-center justify-between relative">
-              {item.volunteers}
+            <td className="px-5 py-4">{item.volunteers}</td>
+            <td className="px-5 py-4 relative">
               <button onClick={() => toggleOptions(item.id)}>
                 <Icon svg="/icons/MoreOptions.svg" props="rotate-90" />
               </button>

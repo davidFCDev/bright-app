@@ -12,7 +12,7 @@ import Details from "../components/details";
 import Location from "../components/location";
 
 const DeliveryDetailsTemplate = () => {
-  const { handleShowAdd, delivery } = useInterfaceContext();
+  const { handleShowDeliveryVolunteersAdd, delivery } = useInterfaceContext();
 
   return (
     <div className="page relative">
@@ -28,7 +28,7 @@ const DeliveryDetailsTemplate = () => {
           <h2>Delivery Volunteers</h2>
         </div>
 
-        <Button text="+ Add Delivery Volunteer" onClick={handleShowAdd} />
+        <Button text="+ Add Delivery Volunteer" onClick={handleShowDeliveryVolunteersAdd} />
       </div>
       <div className="flex flex-col gap-4 w-full items-start">
         <DeliveryDetailFilters />
