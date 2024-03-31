@@ -1,10 +1,21 @@
+'use client'
 import Icon from "@/modules/common/icons";
 import { RequestList } from "@/types";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const UserBox = ({ name, status, child, date }: RequestList) => {
+  const router = useRouter();
+
+  const handlePreview = (id: number) => {
+    router.push(`/menu/dashboard/${id}`);
+  };
+
   return (
-    <div className="bg-white hover:bg-gray-200 hover:cursor-pointer flex flex-col gap-2 text-black px-3 py-3 rounded border border-neutral-200">
+    <div
+      onClick={() => handlePreview(1)}
+      className="bg-white hover:bg-gray-100 hover:cursor-pointer flex flex-col gap-2 text-black px-3 py-3 rounded border border-neutral-200"
+    >
       <div className="flex items-center justify-between">
         <p className="font-semibold">{name}</p>
         <div

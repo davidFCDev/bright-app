@@ -32,7 +32,7 @@ const DeliveryBox = ({
   return (
     <div
       onClick={() => handleShowDetails(1)}
-      className="w-full flex flex-col bg-white text-black  rounded border border-neutral-300 hover:bg-neutral-200"
+      className="w-full flex flex-col bg-white text-black  rounded border border-neutral-300 hover:bg-neutral-100"
     >
       <div className="flex items-start w-full px-3 py-3 gap-4">
         <input type="checkbox" className="scale-150 mt-4" />

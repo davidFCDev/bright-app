@@ -19,7 +19,7 @@ const LinkRequest = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="absolute z-30 flex flex-col sm:right-20 sm:bottom-16 w-full sm:w-[60%] h-full sm:h-[40%] bg-white overflow-y-scroll border border-neutral-300 shadow shadow-neutral-300"
+            className="absolute z-30 flex flex-col right-0 bottom-0 sm:right-16 sm:bottom-16 w-full sm:w-[60%] h-full sm:h-[40%] bg-white overflow-y-scroll border border-neutral-300 shadow shadow-neutral-300"
           >
             <div className="flex items-end justify-between w-full py-5 px-8">
               <div className="flex items-center gap-2 ">

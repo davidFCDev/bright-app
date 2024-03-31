@@ -10,7 +10,7 @@ type Props = {
 
 export default function SelectForm({ label, id, options }: Props) {
   return (
-    <div className="flex flex-col justify-center py-1 relative">
+    <div className="flex flex-col justify-center py-1 relative w-full">
       <div className="flex flex-col">
         <label htmlFor={id} className="font-semibold w-full">
           {label}

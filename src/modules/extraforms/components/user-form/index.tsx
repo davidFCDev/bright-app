@@ -17,7 +17,7 @@ const statusStyle = {
 
 const UserBoxExtraForm = ({ name, status, mail, ready, date }: UserFormProps) => {
   return (
-    <div className="w-full flex items-start gap-4 bg-white text-black px-3 py-3 rounded border border-neutral-300 hover:bg-neutral-200">
+    <div className="w-full flex items-start gap-4 bg-white text-black px-3 py-3 rounded border border-neutral-300 hover:bg-neutral-100">
       <input type="checkbox" className="scale-150 mt-4" />
       <div className="flex flex-col gap-4 text-black w-full">
         <div className="flex flex-col gap-2">

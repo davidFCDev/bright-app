@@ -1,6 +1,6 @@
 import { USERS_TABLE } from "@/constants";
 import Icon from "@/modules/common/icons";
-import UserOptions from "../user-options";
+import UserOptions from "../../../common/user-options";
 import { useInterfaceContext } from "@/lib/context/interface-context";
 
 const UsersTable = () => {

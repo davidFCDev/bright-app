@@ -4,9 +4,10 @@ import React, { useState } from "react";
 import Resume from "../components/resume";
 import Image from "next/image";
 import Line from "@/modules/common/line";
-import Filters from "../components/filters";
 import AgeReport from "../components/age-report";
 import ChildrenServed from "../components/children-served";
+import OutButton from "@/modules/common/outline-button";
+import Selector from "@/modules/common/selector";
 
 const AnalyticsTemplate = () => {
   return (
@@ -16,7 +17,14 @@ const AnalyticsTemplate = () => {
           <Icon svg="/icons/Stats.svg" />
           <h2>Analytics</h2>
         </div>
-        <Filters />
+        <div className="flex items-center gap-6 text-sm font-semibold">
+          <OutButton
+            text="Export"
+            icon={<Icon svg="/icons/Download.svg" width={16} />}
+            props={"text-sm font-semibold hidden sm:flex"}
+          />
+          <Selector text="Period" label="Last 12 months" />
+        </div>
       </div>
 
       <Resume />

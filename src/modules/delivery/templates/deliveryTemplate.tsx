@@ -3,12 +3,12 @@ import Button from "@/modules/common/button";
 import Icon from "@/modules/common/icons";
 import OutButton from "@/modules/common/outline-button";
 import React from "react";
-import DeliveryFilters from "../components/filters";
 import Search from "@/modules/common/search";
 import DeliveryTable from "../components/delivery-table";
 import DeliveryAdd from "../components/delivery-add";
 import { useInterfaceContext } from "@/lib/context/interface-context";
 import ResponsiveDeliveryTable from "../components/responsive-delivery-table";
+import InputFilters from "@/modules/common/input-filters";
 
 const DeliveryTemplate = () => {
   const { handleShowDeliveryLocationsAdd } = useInterfaceContext();
@@ -34,16 +34,12 @@ const DeliveryTemplate = () => {
           />
         </div>
       </div>
-      <div className="flex flex-col gap-4 w-full items-start">
-        <DeliveryFilters />
-        <div className="flex items-center w-full gap-4">
-          <Search width="w-full" />
-          <OutButton
-            icon={<Icon svg="/icons/Filter.svg" />}
-            text="Filter"
-            props={"sm:hidden w-32"}
-          />
-        </div>
+
+      <div className="flex flex-row-reverse sm:flex-col gap-4 w-full items-start">
+        <InputFilters
+          filters={["Status: All", "Organization: All", "Location: All"]}
+        />
+        <Search width="w-full" />
       </div>
 
       <DeliveryTable />

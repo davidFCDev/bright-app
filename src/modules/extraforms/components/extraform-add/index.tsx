@@ -5,6 +5,7 @@ import MailInput from "../../../common/input-email";
 import OutButton from "@/modules/common/outline-button";
 import Button from "@/modules/common/button";
 import { useInterfaceContext } from "@/lib/context/interface-context";
+import InputForm from "@/modules/common/input-form";
 
 const ExtraFormAdd = () => {
   const { showSendForm, handleShowSendForm } = useInterfaceContext();
@@ -31,11 +32,19 @@ const ExtraFormAdd = () => {
               </div>
             </div>
             <form className="flex flex-col gap-5 py-5 px-8 text-sm">
-              <NameImput showIcon={true} />
-              <MailInput />
+              <InputForm id="name" label="Name" placeholder="Jaxson Geidt" />
+              <InputForm
+                id="mail"
+                label="Mail"
+                placeholder="jaxson.geidt@webmail.com"
+              />
               <hr className="border border-neutral-200 w-full" />
-              <NameImput showIcon={true} />
-              <MailInput />
+              <InputForm id="name" label="Name" placeholder="Jaxson Geidt" />
+              <InputForm
+                id="mail"
+                label="Mail"
+                placeholder="jaxson.geidt@webmail.com"
+              />
               <hr className="border border-neutral-200 w-full" />
               <div>
                 <OutButton
@@ -47,7 +56,7 @@ const ExtraFormAdd = () => {
                 />
               </div>
               <hr className="border border-neutral-200 w-full" />
-              <div className="flex sm:justify-end w-full sm:w-fit">
+              <div className="flex sm:justify-end w-full">
                 <Button text="Send Form" props={"w-full sm:w-fit"} />
               </div>
             </form>

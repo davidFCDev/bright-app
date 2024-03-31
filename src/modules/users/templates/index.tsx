@@ -8,6 +8,7 @@ import UserAdd from "../components/user-add";
 import UserEdit from "../components/user-edit";
 import { useInterfaceContext } from "@/lib/context/interface-context";
 import ResponsiveUserTable from "../components/responsive-user-table";
+import InputFilters from "@/modules/common/input-filters";
 
 const UsersTemplate = () => {
   const { handleShowUserAdd } = useInterfaceContext();
@@ -22,15 +23,16 @@ const UsersTemplate = () => {
         <Button text="+ Add User" onClick={handleShowUserAdd} />
       </div>
       <div className="flex flex-row-reverse sm:flex-col gap-4 w-full items-start">
-        <Filters />
+        <InputFilters filters={["Status: All", "Date: All"]} />
         <Search width="w-full" />
       </div>
+
       <UsersTable />
 
       <ResponsiveUserTable />
 
       <UserAdd />
-      <UserEdit user="Jaxson Geidt" />
+      <UserEdit />
     </div>
   );
 };

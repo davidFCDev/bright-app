@@ -2,6 +2,7 @@ import { useInterfaceContext } from "@/lib/context/interface-context";
 import Button from "@/modules/common/button";
 import Icon from "@/modules/common/icons";
 import AgencyInput from "@/modules/common/input-agency";
+import InputForm from "@/modules/common/input-form";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 
@@ -30,7 +31,7 @@ const AgencyAdd = () => {
               </div>
             </div>
             <form className="flex flex-col gap-5 py-5 px-8 text-sm">
-              <AgencyInput />
+              <InputForm id="name" label="Agency Name" placeholder="Act of Love" />
               <hr className="border border-neutral-200 w-full" />
               <div className="w-full flex justify-end">
                 <Button text="Save" props={"w-full sm:w-fit"} />

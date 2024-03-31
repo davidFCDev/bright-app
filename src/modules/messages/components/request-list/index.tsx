@@ -1,6 +1,6 @@
 import { REQUEST_LIST } from "@/constants";
 import React from "react";
-import UserBox from "../../../common/user";
+import LinkRequestBox from "../link-request-box";
 
 interface RequestListProps {
   props?: any;
@@ -10,7 +10,7 @@ const RequestList = ({ props }: RequestListProps) => {
   return (
     <div className={`${props}`}>
       {REQUEST_LIST.map((item, index) => (
-        <UserBox
+        <LinkRequestBox
           key={index}
           child={item.child}
           date={item.date}

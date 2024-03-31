@@ -1,14 +1,12 @@
 import Button from "@/modules/common/button";
 import Icon from "@/modules/common/icons";
-import MailInput from "@/modules/common/input-email";
-import NameImput from "@/modules/common/input-name";
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { MdArrowDropDown } from "react-icons/md";
-import PhoneInput from "@/modules/common/input-phone";
-import UserInput from "@/modules/common/input-user";
 import SwitchInput from "@/modules/common/switch";
 import { useInterfaceContext } from "@/lib/context/interface-context";
+import InputForm from "@/modules/common/input-form";
+import SelectForm from "@/modules/common/select-form";
 
 const UserAdd = () => {
   const { showUserAdd, handleShowUserAdd } = useInterfaceContext();
@@ -38,11 +36,11 @@ const UserAdd = () => {
                 </button>
               </div>
             </div>
-            <form className="flex flex-col gap-5 py-5 px-8 text-sm">
-              <NameImput showIcon={false} />
-              <MailInput />
-              <PhoneInput />
-              <UserInput />
+            <form className="flex flex-col gap-4 py-5 px-8 text-sm">
+              <InputForm id="name" label="Name" placeholder="Jaxson Geidt" />
+              <InputForm id="mail" label="Mail" placeholder="jaxson.geidt@webmail.com" />
+              <InputForm id="phone" label="Phone" placeholder="(206) 342-8631" />
+              <SelectForm id="user" label="User Type" options={["Admin", "User"]} />
               <div className="flex items-center gap-2">
                 <SwitchInput />
                 <p className="font-semibold text-neutral-800">

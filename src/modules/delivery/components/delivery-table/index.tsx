@@ -1,7 +1,7 @@
 "use client";
 import { DELIVERY_TABLE } from "@/constants";
 import Icon from "@/modules/common/icons";
-import DeliveryOptions from "../delivery-options";
+import DeliveryOptions from "../../../common/delivery-options";
 import { useInterfaceContext } from "@/lib/context/interface-context";
 import { useRouter } from "next/navigation";
 
@@ -34,7 +34,7 @@ const DeliveryTable = () => {
             <tr
               onClick={() => handleShowDetails(item.id)}
               key={item.id}
-              className="bg-neutral-50 border border-neutral-300 hover:cursor-pointer hover:bg-neutral-200"
+              className="bg-neutral-50 border border-neutral-300 hover:cursor-pointer hover:bg-neutral-100"
             >
               <td className="px-5 py-4 flex gap-5 ">
                 <input type="checkbox" className="scale-125" />

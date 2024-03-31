@@ -21,26 +21,7 @@ import {
 import Icon from "@/modules/common/icons";
 import UserBox from "@/modules/common/user";
 
-export const VOL_ROUTES: Route[] = [
-  {
-    path: "/menu/dashboard/volunteer",
-    name: "Dashboard",
-    icon: <Icon svg="/icons/Dashboard.svg" />,
-  },
-  {
-    path: "/menu/requests",
-    name: "Requests",
-    icon: <Icon svg="/icons/Requests.svg" />,
-  },
-  {
-    path: "/menu/messages",
-    name: "Notifications",
-    icon: <Icon svg="/icons/Chat.svg" />,
-    number: 2,
-  },
-];
-
-export const ADMIN_ROUTES: Route[] = [
+export const ROUTES: Route[] = [
   {
     path: "/menu/dashboard/admin",
     name: "Dashboard",
@@ -80,7 +61,6 @@ export const ADMIN_ROUTES: Route[] = [
     path: "/menu/messages",
     name: "Messages",
     icon: <Icon svg="/icons/Chat.svg" />,
-    number: 2,
   },
 ];
 

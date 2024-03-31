@@ -24,7 +24,7 @@ const VolunteerBox = ({
   phone,
 }: DeliveryBoxProps) => {
   return (
-    <div className="w-full flex flex-col bg-white text-black  rounded border border-neutral-300 hover:bg-neutral-200">
+    <div className="w-full flex flex-col bg-white text-black  rounded border border-neutral-300 hover:bg-neutral-100">
       <div className="flex items-start w-full px-3 py-3 gap-4">
         <input type="checkbox" className="scale-150 mt-4" />
         <div className="flex flex-col gap-4 text-black w-full">

@@ -10,6 +10,7 @@ import NameImput from "@/modules/common/input-name";
 import MailInput from "@/modules/common/input-email";
 import PhoneInput from "@/modules/common/input-phone";
 import StateInput from "@/modules/common/input-state";
+import InputForm from "@/modules/common/input-form";
 
 const DeliveryAddPerson = () => {
   const { showDeliveryVolunteers, handleShowDeliveryVolunteersAdd } =
@@ -43,19 +44,34 @@ const DeliveryAddPerson = () => {
                 </button>
               </div>
             </div>
-            <form className="flex flex-col gap-5 py-5 px-8 text-sm">
-              <NameImput showIcon={false} />
-              <MailInput />
+            <form className="flex flex-col gap-4 py-5 px-8 text-sm">
+              <InputForm id="name" label="Name" placeholder="Kianna Bator" />
+              <InputForm
+                id="mail"
+                label="Mail"
+                placeholder="kiannab@gmail.com"
+              />
               <div className="bg-terciary p-4 text-neutral-800">
                 <p>
                   Once you submit this form, volunteer will be notified and
                   welcomed via email.
                 </p>
               </div>
-              <PhoneInput />
-              <AddressInput />
-              <CityInput />
-              <StateInput />
+              <InputForm
+                id="phone"
+                label="Phone"
+                placeholder="(206) 342-8631"
+              />
+              <InputForm
+                id="address"
+                label="Address"
+                placeholder="1052 E State Highw3ay 152"
+              />
+              <InputForm id="city" label="City" placeholder="Mustang" />
+              <div className="flex items-center gap-3 w-full">
+                <InputForm id="state" label="State" placeholder="OK" />
+                <InputForm id="zip" label="Zip" placeholder="73064" />
+              </div>
               <hr className="border border-neutral-200 w-full" />
               <div className="w-full flex justify-end">
                 <Button text="Save" props={"w-full sm:w-fit"} />

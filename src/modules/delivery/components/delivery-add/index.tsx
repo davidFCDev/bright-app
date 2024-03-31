@@ -4,11 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 import { MdArrowDropDown } from "react-icons/md";
 import { useInterfaceContext } from "@/lib/context/interface-context";
-import LocationInput from "@/modules/common/input-location";
-import OrganizationInput from "@/modules/common/input-organization";
-import AddressInput from "@/modules/common/input-adress";
-import CityInput from "@/modules/common/input-city";
-import DeliveryInput from "@/modules/common/input-delivery";
+import InputForm from "@/modules/common/input-form";
 
 const DeliveryAdd = () => {
   const { showDeliveryLocations, handleShowDeliveryLocationsAdd } =
@@ -41,12 +37,29 @@ const DeliveryAdd = () => {
                 </button>
               </div>
             </div>
-            <form className="flex flex-col gap-5 py-5 px-8 text-sm">
-              <OrganizationInput />
-              <LocationInput />
-              <AddressInput />
-              <CityInput />
-              <DeliveryInput />
+            <form className="flex flex-col gap-4 py-5 px-8 text-sm">
+              <InputForm
+                id="organization"
+                label="Organization"
+                placeholder="Life Church"
+              />
+              <InputForm id="location" label="Location" placeholder="Mustang" />
+              <InputForm
+                id="address"
+                label="Address"
+                placeholder="1052 E State Highway 152"
+              />
+              <InputForm id="city" label="City" placeholder="Mustang" />
+              <div className="flex items-center gap-3 w-full">
+                <InputForm id="state" label="State" placeholder="OK" />
+                <InputForm id="zip" label="Zip" placeholder="73064" />
+              </div>
+              <div className="flex items-center gap-3 w-full">
+                <InputForm id="lat" label="Lat" placeholder="35.38888265" />
+                <InputForm id="long" label="Long" placeholder="35.38888265" />
+              </div>
+              <InputForm id="distance" label="Max Distance" placeholder="" />
+              <InputForm id="zips" label="Allow Zips" placeholder="73064" />
               <hr className="border border-neutral-200 w-full" />
               <div className="w-full flex justify-end">
                 <Button text="Save" props={"w-full sm:w-fit"} />

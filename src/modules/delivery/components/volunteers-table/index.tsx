@@ -22,7 +22,7 @@ const VolunteersTable = () => {
           {VOLUNTEERS_TABLE.map((item, index) => (
             <tr
               key={index}
-              className="bg-neutral-50 border border-neutral-300 hover:cursor-pointer hover:bg-neutral-200 items-center"
+              className="bg-neutral-50 border border-neutral-300 hover:cursor-pointer hover:bg-neutral-100 items-center"
             >
               <td className="px-5 py-4 flex gap-5 items-center">
                 <input type="checkbox" className="scale-125" />

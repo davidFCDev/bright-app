@@ -30,8 +30,6 @@ const ChatTemplate = () => {
         <div className="py-3 px-6">
           <Chat />
         </div>
-
-        
       </div>
 
       <LinkRequest />

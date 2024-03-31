@@ -1,14 +1,7 @@
 import { REQUESTS_TABLE } from "@/constants";
-import CancelButton from "@/modules/common/cancel-button";
 import Icon from "@/modules/common/icons";
-import { useRouter } from "next/navigation";
 
 const RequestsTable = () => {
-  const router = useRouter();
-
-  const handlePreview = (id: number) => {
-    router.push(`/menu/requests/${id}`);
-  };
 
   return (
     <div className="hidden sm:block w-full">
@@ -28,9 +21,8 @@ const RequestsTable = () => {
         <tbody className="font-semibold text-neutral-600">
           {REQUESTS_TABLE.map((request, index) => (
             <tr
-              onClick={() => handlePreview(request.id)}
               key={index}
-              className="bg-neutral-50 border border-neutral-300 hover:cursor-pointer hover:bg-neutral-200"
+              className="bg-neutral-50 border border-neutral-300 hover:cursor-pointer hover:bg-neutral-100"
             >
               <td className="px-5 py-4 flex gap-5">
                 <input type="checkbox" className="scale-125" />

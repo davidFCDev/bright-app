@@ -33,7 +33,7 @@ h3 {
 @media only screen and (max-width: 600px) {
   .page {
     padding: 0 1rem;
-    padding-top: 0.75rem;
+    padding-top: 5rem;
     padding-bottom: 5rem; 
   }
 }
