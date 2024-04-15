@@ -14,7 +14,7 @@ const LoginForm = () => {
 
   return (
     <form className="flex flex-col gap-6 justify-center items-start w-80 text-sm">
-      <button className="flex justify-center items-center gap-2 border border-neutral-500 rounded-md w-full py-3 hover:shadow-sm hover:shadow-neutral-400">
+      <button onClick={handleLogin} className="flex justify-center items-center gap-2 border border-neutral-500 rounded-md w-full py-3 hover:shadow-sm hover:shadow-neutral-400">
         <Image src="/google-icon.png" alt="google" width={20} height={20} />
         <span className="font-semibold">Sign in with Google</span>
       </button>

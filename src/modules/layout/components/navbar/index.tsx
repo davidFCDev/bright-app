@@ -14,23 +14,11 @@ const Navbar = () => {
         <div className="border-b border-neutral-300">
           <div>
             {showMenu ? (
-              <motion.div
-                initial={{ x: -100 }}
-                animate={{ x: 0 }}
-                exit={{ x: -100 }}
-                transition={{ duration: 0.4 }}
-                className="flex justify-center items-center px-10 py-7"
-              >
+              <motion.div className="flex justify-center items-center px-10 py-7">
                 <Image src="/logo.png" width={220} height={150} alt="logo" />
               </motion.div>
             ) : (
-              <motion.div
-                initial={{ x: -100 }}
-                animate={{ x: 0 }}
-                exit={{ x: -100 }}
-                transition={{ duration: 0.4 }}
-                className="flex justify-center items-center py-10 px-3"
-              >
+              <motion.div className="flex justify-center items-center py-10 px-3">
                 <Image src="/logo-sm.png" alt="logo" width={50} height={50} />
               </motion.div>
             )}
